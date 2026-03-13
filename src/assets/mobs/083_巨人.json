@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:giant",
+  "name": "巨人",
+  "category": "敌对",
+  "baseStats": {
+    "health": 180,
+    "attack": 20.0,
+    "defense": 20,
+    "moveSpeed": 0.16
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.16,
+      "attackPerStar": 0.1,
+      "skillPowerPerStar": 0.1
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 180.0,
+        "attack": 20.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 208.8,
+        "attack": 22.0,
+        "skillPowerMultiplier": 1.1
+      },
+      {
+        "star": 3,
+        "health": 237.6,
+        "attack": 24.0,
+        "skillPowerMultiplier": 1.2
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "titan_stomp",
+      "name": "泰坦践踏",
+      "cooldown": 9,
+      "type": "主动",
+      "triggerCondition": "近战接触后",
+      "description": "重踏地面造成大范围震击伤害。",
+      "damageFormula": "基础攻击*1.35+8",
+      "skillBackground": "体型优势让其每一步都带有冲击波。",
+      "effect": "范围高伤并眩晕0.6秒"
+    },
+    {
+      "id": "colossus_skin",
+      "name": "巨躯硬化",
+      "cooldown": 11,
+      "type": "被动",
+      "triggerCondition": "生命低于60%",
+      "description": "表层硬化，显著降低后续承伤。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "巨躯在危急时会进入防御姿态。",
+      "effect": "减伤24%持续2秒"
+    }
+  ],
+  "story": "巨人是终极重装位，移动慢但拥有极高压场能力。"
+}

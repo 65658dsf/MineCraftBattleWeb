@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:creeper",
+  "name": "苦力怕",
+  "category": "敌对",
+  "baseStats": {
+    "health": 26,
+    "attack": 12.0,
+    "defense": 4,
+    "moveSpeed": 0.25
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.15,
+      "attackPerStar": 0.17,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 26.0,
+        "attack": 12.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 29.9,
+        "attack": 14.0,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 33.8,
+        "attack": 16.1,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "fuse_burst",
+      "name": "引信爆裂",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "贴近目标1秒后",
+      "description": "短延迟爆炸造成高额范围伤害。",
+      "damageFormula": "基础攻击*1.4+4",
+      "skillBackground": "引信点燃后会迅速释放全部能量。",
+      "effect": "范围高伤并击退"
+    },
+    {
+      "id": "panic_charge",
+      "name": "惊惧突进",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "生命低于40%",
+      "description": "濒危时加速冲向最近敌人。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "受压状态会让其行为更极端。",
+      "effect": "移速+25%持续2秒"
+    }
+  ],
+  "story": "苦力怕是自爆突击位，单次爆发极强但容错低。"
+}

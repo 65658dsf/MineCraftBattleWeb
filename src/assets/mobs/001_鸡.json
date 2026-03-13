@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:chicken",
+  "name": "鸡",
+  "category": "辅助",
+  "baseStats": {
+    "health": 14,
+    "attack": 4.6,
+    "defense": 2.0,
+    "moveSpeed": 0.34
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.15,
+      "attackPerStar": 0.16,
+      "skillPowerPerStar": 0.14
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 14.0,
+        "attack": 4.6,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 16.1,
+        "attack": 5.3,
+        "skillPowerMultiplier": 1.14
+      },
+      {
+        "star": 3,
+        "health": 18.2,
+        "attack": 6.1,
+        "skillPowerMultiplier": 1.28
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "咯咯号令",
+      "type": "主动",
+      "cooldown": 8,
+      "triggerCondition": "自动触发",
+      "description": "发出急促的叫声，激励周围友军。",
+      "damageFormula": "无伤害",
+      "skillBackground": "鸡在受到惊吓或奔跑时会发出咯咯声，仿佛在催促同伴。",
+      "effect": "周围友军移速+20%，攻速+10%，持续3秒"
+    },
+    {
+      "name": "羽落轻盈",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "轻盈的羽毛让它能规避部分物理冲击。",
+      "damageFormula": "物理闪避率+20%",
+      "skillBackground": "鸡拥有免疫摔落伤害的特性，身姿轻盈。",
+      "effect": "自身受到的物理伤害有20%概率被完全规避"
+    },
+    {
+      "name": "晨曦报晓",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时发出洪亮的啼鸣，唤醒沉睡的斗志。",
+      "damageFormula": "治疗量=最大生命*15%",
+      "skillBackground": "公鸡报晓象征着新的一天，驱散黑暗与负面状态。",
+      "effect": "立即清除己方全体的眩晕/恐惧/睡眠状态，并恢复15%生命"
+    }
+  ],
+  "story": "鸡从刺客转型为游击辅助，利用高移速穿梭战场，为队友提供频道的加速buff，并在关键时刻解除全队控制。"
+}

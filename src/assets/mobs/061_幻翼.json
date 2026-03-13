@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:phantom",
+  "name": "幻翼",
+  "category": "敌对",
+  "baseStats": {
+    "health": 22,
+    "attack": 7.0,
+    "defense": 4,
+    "moveSpeed": 0.36
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.15,
+      "attackPerStar": 0.16,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 22.0,
+        "attack": 7.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 25.3,
+        "attack": 8.1,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 28.6,
+        "attack": 9.2,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "dive_claw",
+      "name": "俯冲裂爪",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "高空切入时",
+      "description": "高速俯冲撕裂目标造成重伤。",
+      "damageFormula": "基础攻击*1.32+1",
+      "skillBackground": "空中速度叠加让俯冲极具杀伤。",
+      "effect": "额外伤害并流血1秒"
+    },
+    {
+      "id": "night_howl",
+      "name": "夜啸压迫",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "战斗超过6秒",
+      "description": "持续啸叫削弱敌方命中。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "夜行威慑会干扰敌方专注。",
+      "effect": "命中-10%持续2秒"
+    }
+  ],
+  "story": "幻翼是空袭收割位，擅长反复俯冲压低后排血线。"
+}

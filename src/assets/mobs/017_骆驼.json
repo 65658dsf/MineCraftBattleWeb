@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:camel",
+  "name": "骆驼",
+  "category": "辅助",
+  "baseStats": {
+    "health": 44,
+    "attack": 5.0,
+    "defense": 10,
+    "moveSpeed": 0.22
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.21,
+      "attackPerStar": 0.11,
+      "skillPowerPerStar": 0.1
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 44.0,
+        "attack": 5.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 53.2,
+        "attack": 5.6,
+        "skillPowerMultiplier": 1.1
+      },
+      {
+        "star": 3,
+        "health": 62.4,
+        "attack": 6.1,
+        "skillPowerMultiplier": 1.2
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "沙漠突进",
+      "type": "主动",
+      "cooldown": 10,
+      "triggerCondition": "自动触发",
+      "description": "向前猛冲一段距离。",
+      "damageFormula": "星级*0.5*基础攻击*1.4",
+      "skillBackground": "骆驼拥有冲刺跳跃的能力，可以跨越峡谷。",
+      "effect": "向前冲刺并撞开路径上的敌人，造成伤害和击退"
+    },
+    {
+      "name": "高耸身姿",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "高大的身躯让矮小的敌人难以触及。",
+      "damageFormula": "近战闪避+20%",
+      "skillBackground": "在Minecraft中，大多数近战怪物无法攻击到骑在骆驼上的玩家。",
+      "effect": "对近战攻击的闪避率提升20%"
+    },
+    {
+      "name": "商队休憩",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时坐下休息，提供恢复光环。",
+      "damageFormula": "回复生命",
+      "skillBackground": "骆驼会坐下休息，商队此时通常会整顿补给。",
+      "effect": "自身获得大幅减伤，并使周围友军每秒恢复5%最大生命，持续5秒"
+    }
+  ],
+  "story": "骆驼是阵地战坦克，利用身高优势规避伤害，并在升星时提供强力的团队续航。"
+}

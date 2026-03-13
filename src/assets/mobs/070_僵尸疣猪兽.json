@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:zoglin",
+  "name": "僵尸疣猪兽",
+  "category": "敌对",
+  "baseStats": {
+    "health": 62,
+    "attack": 13.0,
+    "defense": 10,
+    "moveSpeed": 0.24
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.13,
+      "skillPowerPerStar": 0.11
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 62.0,
+        "attack": 13.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 73.2,
+        "attack": 14.7,
+        "skillPowerMultiplier": 1.11
+      },
+      {
+        "star": 3,
+        "health": 84.3,
+        "attack": 16.4,
+        "skillPowerMultiplier": 1.22
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "undead_ram",
+      "name": "亡蹄冲撞",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "接敌后",
+      "description": "无差别冲撞周围目标造成范围伤害。",
+      "damageFormula": "基础攻击*1.24+4",
+      "skillBackground": "尸化后失去理智，冲撞更疯狂。",
+      "effect": "范围伤害并击退"
+    },
+    {
+      "id": "feral_decay",
+      "name": "腐狂增幅",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "击杀后",
+      "description": "腐化能量提升短时攻击强度。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "亡灵化让其对血腥更敏感。",
+      "effect": "攻击+14%持续2秒"
+    }
+  ],
+  "story": "僵尸疣猪兽是无差别破阵位，节奏凶猛且滚雪球快。"
+}

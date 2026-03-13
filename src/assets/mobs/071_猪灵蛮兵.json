@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:piglin_brute",
+  "name": "猪灵蛮兵",
+  "category": "敌对",
+  "baseStats": {
+    "health": 50,
+    "attack": 14.0,
+    "defense": 11,
+    "moveSpeed": 0.24
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.1
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 50.0,
+        "attack": 14.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 59.0,
+        "attack": 16.0,
+        "skillPowerMultiplier": 1.1
+      },
+      {
+        "star": 3,
+        "health": 68.0,
+        "attack": 18.0,
+        "skillPowerMultiplier": 1.2
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "brute_cleave",
+      "name": "蛮兵裂斧",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "近战连续两击后",
+      "description": "重斧劈砍造成高额破甲伤害。",
+      "damageFormula": "基础攻击*1.3+4",
+      "skillBackground": "蛮兵战技专精于正面斩杀。",
+      "effect": "额外伤害并降防1秒"
+    },
+    {
+      "id": "golden_wrath",
+      "name": "金怒战吼",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "生命低于55%",
+      "description": "战吼提升攻击并降低受控时间。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "极端好战性格让其越伤越凶。",
+      "effect": "攻击+12%并韧性提升2秒"
+    }
+  ],
+  "story": "猪灵蛮兵是重斩前排位，单点爆发与压制力很高。"
+}

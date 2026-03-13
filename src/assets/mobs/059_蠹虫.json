@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:silverfish",
+  "name": "蠹虫",
+  "category": "敌对",
+  "baseStats": {
+    "health": 10,
+    "attack": 3.0,
+    "defense": 2,
+    "moveSpeed": 0.35
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.14,
+      "attackPerStar": 0.18,
+      "skillPowerPerStar": 0.16
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 10.0,
+        "attack": 3.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 11.4,
+        "attack": 3.5,
+        "skillPowerMultiplier": 1.16
+      },
+      {
+        "star": 3,
+        "health": 12.8,
+        "attack": 4.1,
+        "skillPowerMultiplier": 1.32
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "burrow_pop",
+      "name": "潜地突现",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "开战首次接敌",
+      "description": "钻地突袭造成偷袭伤害。",
+      "damageFormula": "基础攻击*1.3+1",
+      "skillBackground": "体型细小便于穿缝潜行。",
+      "effect": "额外伤害并短暂破甲"
+    },
+    {
+      "id": "swarm_call",
+      "name": "虫群呼应",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "生命低于40%",
+      "description": "呼应同类，临时提高攻速。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "群体共振能激发更强攻击性。",
+      "effect": "攻速+18%持续2秒"
+    }
+  ],
+  "story": "蠹虫是高机动骚扰位，单体弱但滚起节奏后很烦人。"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:husk",
+  "name": "尸壳",
+  "category": "敌对",
+  "baseStats": {
+    "health": 36,
+    "attack": 8.0,
+    "defense": 8,
+    "moveSpeed": 0.22
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.19,
+      "attackPerStar": 0.13,
+      "skillPowerPerStar": 0.11
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 36.0,
+        "attack": 8.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 42.8,
+        "attack": 9.0,
+        "skillPowerMultiplier": 1.11
+      },
+      {
+        "star": 3,
+        "health": 49.6,
+        "attack": 10.1,
+        "skillPowerMultiplier": 1.22
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "sand_bite",
+      "name": "砂蚀咬击",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "近战命中时",
+      "description": "附带风砂侵蚀，持续削弱目标。",
+      "damageFormula": "基础攻击*1.22+2",
+      "skillBackground": "荒漠风化让其攻击更具磨损性。",
+      "effect": "额外伤害并降防2秒"
+    },
+    {
+      "id": "dry_skin",
+      "name": "干壳硬化",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "生命低于50%",
+      "description": "表皮硬化提高抗打击能力。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "干裂外壳在逆境中反而更坚固。",
+      "effect": "减伤20%持续2秒"
+    }
+  ],
+  "story": "尸壳是耐久压制位，擅长持续削弱前排并拖长战斗。"
+}

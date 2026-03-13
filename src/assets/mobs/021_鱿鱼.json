@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:squid",
+  "name": "鱿鱼",
+  "category": "辅助",
+  "baseStats": {
+    "health": 20,
+    "attack": 3.0,
+    "defense": 4,
+    "moveSpeed": 0.29
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.13,
+      "skillPowerPerStar": 0.14
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 20.0,
+        "attack": 3.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 23.4,
+        "attack": 3.4,
+        "skillPowerMultiplier": 1.14
+      },
+      {
+        "star": 3,
+        "health": 26.8,
+        "attack": 3.8,
+        "skillPowerMultiplier": 1.28
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "墨囊喷射",
+      "type": "主动",
+      "cooldown": 8,
+      "triggerCondition": "自动触发",
+      "description": "喷射墨汁，干扰敌人视线。",
+      "damageFormula": "无",
+      "skillBackground": "鱿鱼受到攻击时会喷出墨汁。",
+      "effect": "对周围敌人造成微量伤害并施加致盲效果（无法攻击）1.5秒"
+    },
+    {
+      "name": "水下呼吸",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "在水中行动自如。",
+      "damageFormula": "移速+20%",
+      "skillBackground": "水生生物特性。",
+      "effect": "自身移动速度提升20%，且不会被溺毙（如果游戏机制有水）"
+    },
+    {
+      "name": "触手纠缠",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时挥舞触手，缠住敌人。",
+      "damageFormula": "无",
+      "skillBackground": "鱿鱼有多条触手。",
+      "effect": "使周围所有敌人定身（无法移动）2秒"
+    }
+  ],
+  "story": "鱿鱼是群体控制辅助，通过致盲和定身保护队友，非常适合应对近战阵容。"
+}

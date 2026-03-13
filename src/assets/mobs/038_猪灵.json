@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:piglin",
+  "name": "猪灵",
+  "category": "中立",
+  "baseStats": {
+    "health": 30,
+    "attack": 7.0,
+    "defense": 6,
+    "moveSpeed": 0.27
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.15,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 30.0,
+        "attack": 7.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 35.1,
+        "attack": 8.1,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 40.2,
+        "attack": 9.1,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "gold_frenzy",
+      "name": "贪金狂袭",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "击杀后触发",
+      "description": "贪欲激发斗性，下一击伤害提高。",
+      "damageFormula": "基础攻击*1.35+1",
+      "skillBackground": "猪灵对战利品的执念会转化为攻击性。",
+      "effect": "下次攻击强化并提升移速"
+    },
+    {
+      "id": "crossbow_shot",
+      "name": "弩矢点射",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "中距离目标存在时",
+      "description": "快速点射压制后排目标。",
+      "damageFormula": "基础攻击*1.2+2",
+      "skillBackground": "熟练使用弩让猪灵具备远程威胁。",
+      "effect": "额外伤害并短暂破防"
+    }
+  ],
+  "story": "猪灵是偏进攻的中立突击位，节奏快，滚雪球能力强。"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:skeleton_horse",
+  "name": "骷髅马",
+  "category": "辅助",
+  "baseStats": {
+    "health": 32,
+    "attack": 6.0,
+    "defense": 7,
+    "moveSpeed": 0.31
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 32.0,
+        "attack": 6.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 37.4,
+        "attack": 6.8,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 42.9,
+        "attack": 7.7,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "雷击陷阱",
+      "type": "主动",
+      "cooldown": 12,
+      "triggerCondition": "自动触发",
+      "description": "以自身为中心在边长5格正方形范围内部署一个雷击陷阱。",
+      "damageFormula": "星级*0.5*基础伤害*1.25，眩晕0.8秒",
+      "skillBackground": "骷髅马通常由雷击产生，且伴随着骷髅陷阱。",
+      "effect": "在当前坐标为中心边长为5的正方形范围内部署一个陷阱，陷阱以圆形粒子特效展示并占据一个方块大小，敌人踩中后受到雷击伤害并眩晕0.8秒"
+    },
+    {
+      "name": "骨架轻盈",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "没有血肉的骨架难以被命中。",
+      "damageFormula": "闪避+15%",
+      "skillBackground": "骷髅马只有骨架，受弹面积小。",
+      "effect": "自身闪避率提升15%，且移动在水中不会减速"
+    },
+    {
+      "name": "四骑士降临",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时仿佛触发了骷髅陷阱。",
+      "damageFormula": "无",
+      "skillBackground": "玩家接近陷阱马时会瞬间生成4个骷髅骑兵。",
+      "effect": "制造3个自身的幻象分身，分身拥有20%攻击力，持续5秒"
+    }
+  ],
+  "story": "骷髅马是干扰型辅助，通过雷击控制和制造分身混乱战场。"
+}

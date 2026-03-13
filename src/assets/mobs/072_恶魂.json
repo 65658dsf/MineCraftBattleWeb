@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:ghast",
+  "name": "恶魂",
+  "category": "敌对",
+  "baseStats": {
+    "health": 30,
+    "attack": 11.0,
+    "defense": 5,
+    "moveSpeed": 0.27
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.16,
+      "attackPerStar": 0.15,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 30.0,
+        "attack": 11.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 34.8,
+        "attack": 12.7,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 39.6,
+        "attack": 14.3,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "fire_orb",
+      "name": "烈焰爆弹",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "中远距离目标存在",
+      "description": "发射爆弹造成范围火焰伤害。",
+      "damageFormula": "基础攻击*1.28+3",
+      "skillBackground": "高压火球是恶魂的核心火力来源。",
+      "effect": "范围伤害并灼烧1秒"
+    },
+    {
+      "id": "wail_echo",
+      "name": "哀嚎回响",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "被集火时",
+      "description": "哀嚎干扰敌方命中与节奏。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "尖啸可让敌方短时失去专注。",
+      "effect": "敌方命中-10%持续2秒"
+    }
+  ],
+  "story": "恶魂是远程轰炸位，适合在后排持续制造范围压力。"
+}

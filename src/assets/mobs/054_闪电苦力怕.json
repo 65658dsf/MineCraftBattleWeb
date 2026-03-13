@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:charged_creeper",
+  "name": "闪电苦力怕",
+  "category": "敌对",
+  "baseStats": {
+    "health": 30,
+    "attack": 16.0,
+    "defense": 5,
+    "moveSpeed": 0.24
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.15,
+      "attackPerStar": 0.18,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 30.0,
+        "attack": 16.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 34.5,
+        "attack": 18.9,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 39.0,
+        "attack": 21.8,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "thunder_fuse",
+      "name": "雷引爆芯",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "进入近身范围",
+      "description": "雷电充能爆炸，造成超高范围伤害。",
+      "damageFormula": "基础攻击*1.45+6",
+      "skillBackground": "闪电赋能使其爆炸威力倍增。",
+      "effect": "范围重伤并短暂眩晕"
+    },
+    {
+      "id": "ion_trail",
+      "name": "离子尾迹",
+      "cooldown": 10,
+      "type": "被动",
+      "triggerCondition": "移动中触发",
+      "description": "残留电荷削弱追击者防御。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "高能电荷会在路径上留下干扰。",
+      "effect": "接触敌人防御-2持续2秒"
+    }
+  ],
+  "story": "闪电苦力怕是极限爆发位，擅长一击改变战局。"
+}

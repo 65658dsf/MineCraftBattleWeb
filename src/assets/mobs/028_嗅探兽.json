@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:sniffer",
+  "name": "嗅探兽",
+  "category": "辅助",
+  "baseStats": {
+    "health": 46,
+    "attack": 5.0,
+    "defense": 12,
+    "moveSpeed": 0.18
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.2,
+      "attackPerStar": 0.11,
+      "skillPowerPerStar": 0.1
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 46.0,
+        "attack": 5.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 55.2,
+        "attack": 5.6,
+        "skillPowerMultiplier": 1.1
+      },
+      {
+        "star": 3,
+        "health": 64.4,
+        "attack": 6.1,
+        "skillPowerMultiplier": 1.2
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "掘地寻宝",
+      "type": "主动",
+      "cooldown": 12,
+      "triggerCondition": "自动触发",
+      "description": "从地下挖出远古植物，散发治愈花粉。",
+      "damageFormula": "无",
+      "skillBackground": "嗅探兽能挖掘出火把花和瓶子草。",
+      "effect": "在原地挖掘出一株植物，为周围友军提供持续5秒的防御力提升（+5）"
+    },
+    {
+      "name": "庞大身躯",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "巨大的体型赋予了极强的稳定性。",
+      "damageFormula": "防击退",
+      "skillBackground": "嗅探兽是巨大的远古生物。",
+      "effect": "免疫击退效果，且生命上限提升20%"
+    },
+    {
+      "name": "远古复苏",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时唤醒远古的生命力。",
+      "damageFormula": "群体治疗",
+      "skillBackground": "嗅探兽本身就是灭绝后复苏的物种。",
+      "effect": "使全体友军立即恢复25%最大生命值，并获得“生命提升”（增加生命上限）效果，持续10秒"
+    }
+  ],
+  "story": "嗅探兽是阵地支援型坦克，提供防御增益和群体治疗，非常适合阵地战。"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:rabbit",
+  "name": "兔子",
+  "category": "辅助",
+  "baseStats": {
+    "health": 12,
+    "attack": 3.0,
+    "defense": 1.0,
+    "moveSpeed": 0.40
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.15,
+      "attackPerStar": 0.20,
+      "skillPowerPerStar": 0.15
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 12.0,
+        "attack": 3.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 13.8,
+        "attack": 3.6,
+        "skillPowerMultiplier": 1.15
+      },
+      {
+        "star": 3,
+        "health": 15.6,
+        "attack": 4.2,
+        "skillPowerMultiplier": 1.30
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "跃动助力",
+      "type": "主动",
+      "cooldown": 9,
+      "triggerCondition": "自动触发",
+      "description": "分享跳跃技巧，让队友更加灵活。",
+      "damageFormula": "无",
+      "skillBackground": "兔子腿可以酿造跳跃药水。",
+      "effect": "使攻击力最高的友军暴击率提升20%，持续4秒"
+    },
+    {
+      "name": "幸运脚",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "极高的机动性让它难以被击中。",
+      "damageFormula": "闪避+25%",
+      "skillBackground": "兔子脚在传说中象征着幸运。",
+      "effect": "自身闪避率提升25%"
+    },
+    {
+      "name": "杀手本能",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时觉醒远古杀手兔的血脉。",
+      "damageFormula": "攻击力+100%",
+      "skillBackground": "《通过杀手兔》是Minecraft中的一个隐藏彩蛋生物，极其凶猛。",
+      "effect": "变身显示红眼特效，攻击力翻倍，攻速提升50%，持续5秒"
+    }
+  ],
+  "story": "兔子平时是灵活的辅助，提供暴击增益，但在升星爆发时会变成恐怖的输出机器。"
+}

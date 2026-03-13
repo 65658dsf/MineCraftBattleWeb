@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:zombified_piglin",
+  "name": "僵尸猪灵",
+  "category": "中立",
+  "baseStats": {
+    "health": 34,
+    "attack": 7.0,
+    "defense": 7,
+    "moveSpeed": 0.25
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 34.0,
+        "attack": 7.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 40.1,
+        "attack": 8.0,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 46.2,
+        "attack": 9.0,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "rage_chain",
+      "name": "亡怒连锁",
+      "cooldown": 8,
+      "type": "被动",
+      "triggerCondition": "友军阵亡时",
+      "description": "受到刺激后攻击与减伤同步提高。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "亡灵化后情绪更极端，易被刺激。",
+      "effect": "攻击+12%减伤12%持续2秒"
+    },
+    {
+      "id": "gold_blade",
+      "name": "镀金斩击",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "近战连击时",
+      "description": "金刀重斩打出高额收割伤害。",
+      "damageFormula": "基础攻击*1.28+2",
+      "skillBackground": "武器挥砍习惯保留于亡灵躯体。",
+      "effect": "额外伤害并附加流血1秒"
+    }
+  ],
+  "story": "僵尸猪灵是愤怒反扑位，越在逆风中越容易爆发。"
+}

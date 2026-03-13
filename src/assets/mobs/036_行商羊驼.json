@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:trader_llama",
+  "name": "行商羊驼",
+  "category": "中立",
+  "baseStats": {
+    "health": 32,
+    "attack": 5.0,
+    "defense": 8,
+    "moveSpeed": 0.24
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.13,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 32.0,
+        "attack": 5.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 37.8,
+        "attack": 5.7,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 43.5,
+        "attack": 6.3,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "guard_spit",
+      "name": "护主喷击",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "友军受击时",
+      "description": "快速反喷攻击威胁目标。",
+      "damageFormula": "基础攻击*1.2+1",
+      "skillBackground": "护卫本能让行商羊驼反应更激进。",
+      "effect": "额外伤害并短暂击退"
+    },
+    {
+      "id": "caravan_bell",
+      "name": "驼铃鼓舞",
+      "cooldown": 10,
+      "type": "被动",
+      "triggerCondition": "击杀后",
+      "description": "振奋附近友军，提高短时移速。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "驼铃节奏可统一队伍推进步伐。",
+      "effect": "友军移速+12%持续2秒"
+    }
+  ],
+  "story": "行商羊驼是护卫型中程位，兼顾反制与团队节奏。"
+}

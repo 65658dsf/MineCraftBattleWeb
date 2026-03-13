@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:breeze",
+  "name": "旋风人",
+  "category": "敌对",
+  "baseStats": {
+    "health": 34,
+    "attack": 8.0,
+    "defense": 7,
+    "moveSpeed": 0.31
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 34.0,
+        "attack": 8.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 39.8,
+        "attack": 9.1,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 45.6,
+        "attack": 10.2,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "wind_blast",
+      "name": "风压弹射",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "中距离目标存在",
+      "description": "发射风弹击退并打乱敌阵。",
+      "damageFormula": "基础攻击*1.2+2",
+      "skillBackground": "压缩气旋可形成强冲击波。",
+      "effect": "额外伤害并击退"
+    },
+    {
+      "id": "updraft_step",
+      "name": "升流闪步",
+      "cooldown": 8,
+      "type": "被动",
+      "triggerCondition": "被近战贴身时",
+      "description": "借上升气流脱离近身包夹。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "对气流掌控使其位移异常灵活。",
+      "effect": "移速+24%持续1.5秒"
+    }
+  ],
+  "story": "旋风人是位移控制位，擅长拆阵与反贴脸。"
+}

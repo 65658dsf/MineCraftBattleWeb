@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:vex",
+  "name": "恼鬼",
+  "category": "敌对",
+  "baseStats": {
+    "health": 18,
+    "attack": 8.0,
+    "defense": 4,
+    "moveSpeed": 0.37
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.14,
+      "attackPerStar": 0.17,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 18.0,
+        "attack": 8.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 20.5,
+        "attack": 9.4,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 23.0,
+        "attack": 10.7,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "phase_stab",
+      "name": "穿墙突刺",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "目标后方有空位",
+      "description": "穿透位面从背后刺击目标。",
+      "damageFormula": "基础攻击*1.3+1",
+      "skillBackground": "灵体形态允许其忽略地形干扰。",
+      "effect": "背刺额外伤害"
+    },
+    {
+      "id": "spirit_flicker",
+      "name": "魂火闪动",
+      "cooldown": 8,
+      "type": "被动",
+      "triggerCondition": "受到致命伤前",
+      "description": "短暂虚化规避一次高额伤害。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "恼鬼可在瞬间切换实体状态。",
+      "effect": "一次伤害减免35%"
+    }
+  ],
+  "story": "恼鬼是高威胁刺客位，切后排能力极强但身板较脆。"
+}

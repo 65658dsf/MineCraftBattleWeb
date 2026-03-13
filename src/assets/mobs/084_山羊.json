@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:goat",
+  "name": "山羊",
+  "category": "无差别",
+  "baseStats": {
+    "health": 32,
+    "attack": 9.0,
+    "defense": 7,
+    "moveSpeed": 0.29
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 32.0,
+        "attack": 9.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 37.4,
+        "attack": 10.3,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 42.9,
+        "attack": 11.5,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "cliff_ram",
+      "name": "峭壁冲角",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "直线冲刺后",
+      "description": "高速顶撞造成强力击退。",
+      "damageFormula": "基础攻击*1.26+2",
+      "skillBackground": "山地冲刺赋予其极强顶撞力。",
+      "effect": "额外伤害并击退"
+    },
+    {
+      "id": "sure_hoof",
+      "name": "稳蹄平衡",
+      "cooldown": 8,
+      "type": "被动",
+      "triggerCondition": "被控制时",
+      "description": "快速恢复平衡缩短受控时长。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "崎岖地形中练就的稳定步法。",
+      "effect": "控制时间-35%"
+    }
+  ],
+  "story": "山羊是冲锋控制位，适合打散敌方站位与阵型。"
+}

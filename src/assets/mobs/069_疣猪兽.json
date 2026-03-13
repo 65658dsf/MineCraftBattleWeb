@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:hoglin",
+  "name": "疣猪兽",
+  "category": "敌对",
+  "baseStats": {
+    "health": 56,
+    "attack": 12.0,
+    "defense": 10,
+    "moveSpeed": 0.23
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.13,
+      "skillPowerPerStar": 0.11
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 56.0,
+        "attack": 12.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 66.1,
+        "attack": 13.6,
+        "skillPowerMultiplier": 1.11
+      },
+      {
+        "star": 3,
+        "health": 76.2,
+        "attack": 15.1,
+        "skillPowerMultiplier": 1.22
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "boar_rush",
+      "name": "獠突猛进",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "接敌瞬间",
+      "description": "前突顶飞目标并造成重伤。",
+      "damageFormula": "基础攻击*1.26+3",
+      "skillBackground": "强壮颈背提供高冲撞动能。",
+      "effect": "额外伤害并击退"
+    },
+    {
+      "id": "wild_blood",
+      "name": "野性血涌",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "被控制后",
+      "description": "解除部分减速并提升攻速。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "狂躁本能让其越压制越凶。",
+      "effect": "攻速+15%持续2秒"
+    }
+  ],
+  "story": "疣猪兽是高压冲撞位，偏持续前压与破阵。"
+}

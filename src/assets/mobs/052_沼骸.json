@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:bogged",
+  "name": "沼骸",
+  "category": "敌对",
+  "baseStats": {
+    "health": 32,
+    "attack": 8.0,
+    "defense": 7,
+    "moveSpeed": 0.21
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 32.0,
+        "attack": 8.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 37.4,
+        "attack": 9.1,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 42.9,
+        "attack": 10.2,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "mire_arrow",
+      "name": "沼泽箭",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "远程命中时",
+      "description": "泥沼箭命中后施加黏滞效果。",
+      "damageFormula": "基础攻击*1.16+2",
+      "skillBackground": "沼地腐殖让其箭矢更易黏附。",
+      "effect": "减速并降攻速1秒"
+    },
+    {
+      "id": "spore_breath",
+      "name": "孢雾呼吸",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "被近战命中时",
+      "description": "反喷孢雾，降低敌方命中率。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "体表菌孢可在受击时被动散逸。",
+      "effect": "目标命中下降1.5秒"
+    }
+  ],
+  "story": "沼骸是远程干扰位，擅长叠加减速与命中压制。"
+}

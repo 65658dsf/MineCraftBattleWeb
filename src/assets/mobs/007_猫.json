@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:cat",
+  "name": "猫",
+  "category": "辅助",
+  "baseStats": {
+    "health": 16,
+    "attack": 3.5,
+    "defense": 2.0,
+    "moveSpeed": 0.35
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.16,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.15
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 16.0,
+        "attack": 3.5,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 18.5,
+        "attack": 4.0,
+        "skillPowerMultiplier": 1.15
+      },
+      {
+        "star": 3,
+        "health": 21.0,
+        "attack": 4.5,
+        "skillPowerMultiplier": 1.30
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "威慑嘶吼",
+      "type": "主动",
+      "cooldown": 12,
+      "triggerCondition": "自动触发",
+      "description": "发出嘶吼，惊吓周围的敌人。",
+      "damageFormula": "无",
+      "skillBackground": "苦力怕和幻翼非常害怕猫，会避开猫。",
+      "effect": "使周围敌人进入“恐惧”状态（无法攻击且背向逃跑），持续1.5秒"
+    },
+    {
+      "name": "灵猫九命",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "致死时",
+      "description": "受到致命伤害时免疫死亡并回血。",
+      "damageFormula": "回复30%生命",
+      "skillBackground": "传说猫有九条命，且Minecraft中猫没有摔落伤害。",
+      "effect": "最多抵挡9次，抵挡致死伤害并立即回复30%生命，并且削减10%基础攻击和最大生命值"
+    },
+    {
+      "name": "早安礼物",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时为主人带来珍贵的礼物。",
+      "damageFormula": "无",
+      "skillBackground": "猫在早上醒来时会给主人带来各种随机物品（如兔子脚、羽毛等）。",
+      "effect": "使生命值最高的友军获得强力增益（伤害+30%或防御+30%），持续8秒"
+    }
+  ],
+  "story": "猫是控制型辅助，能有效打断敌人节奏，并拥有一次保命机会，升星后能大幅强化核心队友。"
+}

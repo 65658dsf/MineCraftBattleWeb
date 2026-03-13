@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:skeleton_horseman",
+  "name": "骷髅骑手",
+  "category": "敌对",
+  "baseStats": {
+    "health": 38,
+    "attack": 10.0,
+    "defense": 8,
+    "moveSpeed": 0.3
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 38.0,
+        "attack": 10.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 44.5,
+        "attack": 11.4,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 50.9,
+        "attack": 12.8,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "storm_volley",
+      "name": "雷骑齐射",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "中距离锁定时",
+      "description": "骑射连发并附带雷击余波。",
+      "damageFormula": "基础攻击*1.24+3",
+      "skillBackground": "骑乘稳定性提升了弓箭火力效率。",
+      "effect": "额外伤害并感电1秒"
+    },
+    {
+      "id": "ghost_charge",
+      "name": "幽驰冲阵",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "击杀后",
+      "description": "短时提升移速并减少受控。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "亡灵坐骑让其转场能力更强。",
+      "effect": "移速+18%韧性提升2秒"
+    }
+  ],
+  "story": "骷髅骑手是机动射击位，擅长边打边拉扯。"
+}

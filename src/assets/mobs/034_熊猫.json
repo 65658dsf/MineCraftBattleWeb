@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:panda",
+  "name": "熊猫",
+  "category": "中立",
+  "baseStats": {
+    "health": 38,
+    "attack": 6.0,
+    "defense": 9,
+    "moveSpeed": 0.22
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.2,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.11
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 38.0,
+        "attack": 6.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 45.6,
+        "attack": 6.7,
+        "skillPowerMultiplier": 1.11
+      },
+      {
+        "star": 3,
+        "health": 53.2,
+        "attack": 7.4,
+        "skillPowerMultiplier": 1.22
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "lazy_counter",
+      "name": "慵懒反手",
+      "cooldown": 8,
+      "type": "被动",
+      "triggerCondition": "受到连续攻击时",
+      "description": "突然反拍，打断敌方连段。",
+      "damageFormula": "基础攻击*1.18+2",
+      "skillBackground": "看似迟缓却有极强的瞬时爆发。",
+      "effect": "反击伤害并眩晕0.5秒"
+    },
+    {
+      "id": "bamboo_focus",
+      "name": "竹息调和",
+      "cooldown": 9,
+      "type": "主动",
+      "triggerCondition": "生命低于45%",
+      "description": "平稳呼吸回复生命并提升防御。",
+      "damageFormula": "回复=最大生命*0.09",
+      "skillBackground": "稳定节律可快速恢复体能。",
+      "effect": "回复生命并防御+3持续2秒"
+    }
+  ],
+  "story": "熊猫是反击型前排，容错高，适合打断敌方连续输出。"
+}

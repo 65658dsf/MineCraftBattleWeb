@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:warden",
+  "name": "监守者",
+  "category": "敌对",
+  "baseStats": {
+    "health": 120,
+    "attack": 18.0,
+    "defense": 18,
+    "moveSpeed": 0.21
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.1
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 120.0,
+        "attack": 18.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 140.4,
+        "attack": 20.2,
+        "skillPowerMultiplier": 1.1
+      },
+      {
+        "star": 3,
+        "health": 160.8,
+        "attack": 22.3,
+        "skillPowerMultiplier": 1.2
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "sonic_boom",
+      "name": "音爆轰击",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "远端目标存在时",
+      "description": "隔空音爆直击敌方核心单位。",
+      "damageFormula": "基础攻击*1.32+6",
+      "skillBackground": "胸腔共振可产生毁灭性声波。",
+      "effect": "高伤并击退"
+    },
+    {
+      "id": "dark_fury",
+      "name": "黑暗狂怒",
+      "cooldown": 10,
+      "type": "被动",
+      "triggerCondition": "生命低于50%",
+      "description": "进入狂怒，攻防同步上升。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "受伤后会完全释放原始杀意。",
+      "effect": "攻击+15%防御+4持续2秒"
+    }
+  ],
+  "story": "监守者是顶级压场位，正面几乎不可硬拼。"
+}

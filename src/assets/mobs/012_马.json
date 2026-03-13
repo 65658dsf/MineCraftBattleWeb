@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:horse",
+  "name": "马",
+  "category": "辅助",
+  "baseStats": {
+    "health": 32,
+    "attack": 5.0,
+    "defense": 7,
+    "moveSpeed": 0.33
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.13,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 32.0,
+        "attack": 5.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 37.8,
+        "attack": 5.7,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 43.5,
+        "attack": 6.3,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "铁蹄冲锋",
+      "type": "主动",
+      "cooldown": 8,
+      "triggerCondition": "自动触发",
+      "description": "向敌人发起冲锋，击退并打乱阵型。",
+      "damageFormula": "星级*0.5*基础攻击*1.5",
+      "skillBackground": "马在冲刺时具有极大的动能。",
+      "effect": "冲向目标，造成伤害并将其击退3格"
+    },
+    {
+      "name": "风驰电掣",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "优秀的奔跑能力使其行动敏捷。",
+      "damageFormula": "移速+20%",
+      "skillBackground": "马是Minecraft中陆地上跑得最快的动物之一。",
+      "effect": "自身移动速度永久提升20%"
+    },
+    {
+      "name": "人马合一",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时发出嘶鸣，带领全队发起冲锋。",
+      "damageFormula": "无",
+      "skillBackground": "骑兵冲锋的号角。",
+      "effect": "己方全体移动速度提升30%，且下一次攻击造成额外50%伤害，持续5秒"
+    }
+  ],
+  "story": "马是冲阵型辅助，通过高机动性分割战场，升星后能大幅提升团队的爆发与切入能力。"
+}

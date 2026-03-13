@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:cave_spider",
+  "name": "洞穴蜘蛛",
+  "category": "中立",
+  "baseStats": {
+    "health": 24,
+    "attack": 7.0,
+    "defense": 5,
+    "moveSpeed": 0.33
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.16,
+      "attackPerStar": 0.15,
+      "skillPowerPerStar": 0.14
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 24.0,
+        "attack": 7.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 27.8,
+        "attack": 8.1,
+        "skillPowerMultiplier": 1.14
+      },
+      {
+        "star": 3,
+        "health": 31.6,
+        "attack": 9.1,
+        "skillPowerMultiplier": 1.28
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "venom_bite",
+      "name": "剧毒噬咬",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "近战命中时",
+      "description": "撕咬附毒，持续消耗目标生命。",
+      "damageFormula": "基础攻击*1.2+1",
+      "skillBackground": "洞穴环境孕育出更强毒性。",
+      "effect": "中毒2秒"
+    },
+    {
+      "id": "wall_skitter",
+      "name": "贴壁疾行",
+      "cooldown": 8,
+      "type": "被动",
+      "triggerCondition": "被近战锁定时",
+      "description": "迅速换位，短时提升闪避。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "洞穴蜘蛛擅长在复杂地形穿梭。",
+      "effect": "闪避+15%持续1.5秒"
+    }
+  ],
+  "story": "洞穴蜘蛛是高压近战毒伤位，持续磨血能力强。"
+}

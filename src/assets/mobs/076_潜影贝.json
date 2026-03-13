@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:shulker",
+  "name": "潜影贝",
+  "category": "敌对",
+  "baseStats": {
+    "health": 42,
+    "attack": 8.0,
+    "defense": 13,
+    "moveSpeed": 0.14
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 42.0,
+        "attack": 8.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 49.6,
+        "attack": 9.0,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 57.1,
+        "attack": 9.9,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "homing_shell",
+      "name": "追踪弹壳",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "中距离目标锁定",
+      "description": "发射追踪弹持续追击目标。",
+      "damageFormula": "基础攻击*1.2+2",
+      "skillBackground": "壳弹可校正轨迹命中机动目标。",
+      "effect": "额外伤害并短暂浮空"
+    },
+    {
+      "id": "closed_shell",
+      "name": "闭壳防线",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "生命低于60%",
+      "description": "闭壳大幅减伤但短时降速。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "闭壳状态提供极强物理防护。",
+      "effect": "减伤30%持续1.5秒"
+    }
+  ],
+  "story": "潜影贝是定点防守炮台位，能硬抗并稳定压制单体。"
+}

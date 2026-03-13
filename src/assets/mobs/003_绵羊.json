@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:sheep",
+  "name": "绵羊",
+  "category": "辅助",
+  "baseStats": {
+    "health": 18,
+    "attack": 2.0,
+    "defense": 3.0,
+    "moveSpeed": 0.22
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.10,
+      "skillPowerPerStar": 0.15
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 18.0,
+        "attack": 2.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 21.2,
+        "attack": 2.2,
+        "skillPowerMultiplier": 1.15
+      },
+      {
+        "star": 3,
+        "health": 24.5,
+        "attack": 2.4,
+        "skillPowerMultiplier": 1.30
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "羊毛护盾",
+      "type": "主动",
+      "cooldown": 12,
+      "triggerCondition": "自动触发",
+      "description": "将厚实的羊毛分给最脆弱的队友。",
+      "damageFormula": "护盾值=自身最大生命*15%",
+      "skillBackground": "羊毛是制作床和地毯的材料，象征着舒适与保护。",
+      "effect": "为当前生命值最低的友军提供护盾，持续5秒"
+    },
+    {
+      "name": "静电绒毛",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "受击时",
+      "description": "蓬松的羊毛带有静电，干扰攻击者。",
+      "damageFormula": "反伤=防御力*0.5",
+      "skillBackground": "羊毛摩擦产生静电，让接触者感到不适。",
+      "effect": "近战攻击者有15%概率被麻痹（攻速降低50%）1秒"
+    },
+    {
+      "name": "彩虹变色",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时羊毛如jeb_般闪烁，赋予队友随机增益。",
+      "damageFormula": "无",
+      "skillBackground": "命名牌jeb_会让羊变色，是Minecraft的经典彩蛋。",
+      "effect": "使己方全体获得随机增益（抗性/力量/速度）之一，持续6秒"
+    }
+  ],
+  "story": "绵羊是保护型辅助，通过护盾保护残血队友，并在升星时提供群体增益。"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:pig",
+  "name": "猪",
+  "category": "辅助",
+  "baseStats": {
+    "health": 20,
+    "attack": 3.0,
+    "defense": 4.0,
+    "moveSpeed": 0.25
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.20,
+      "attackPerStar": 0.10,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 20.0,
+        "attack": 3.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 24.0,
+        "attack": 3.3,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 28.0,
+        "attack": 3.6,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "冲撞拱泥",
+      "type": "主动",
+      "cooldown": 10,
+      "triggerCondition": "自动触发",
+      "description": "向敌人发起冲撞，扬起泥土干扰视线。",
+      "damageFormula": "星级*0.5*基础攻击*1.5",
+      "skillBackground": "猪喜欢在泥土中打滚，冲撞时会带起泥浆。",
+      "effect": "对目标造成伤害并使其命中率降低30%，持续3秒"
+    },
+    {
+      "name": "厚皮脂肪",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "厚实的脂肪层提供天然的防护。",
+      "damageFormula": "减伤15%",
+      "skillBackground": "猪圆润的体型和脂肪层能有效缓冲伤害。",
+      "effect": "自身受到的所有伤害降低15%"
+    },
+    {
+      "name": "饱食成长",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时刻食欲大增，体型与生命值暴涨。",
+      "damageFormula": "最大生命提升20%",
+      "skillBackground": "猪通过进食胡萝卜迅速繁殖成长的特性。",
+      "effect": "立即恢复全部生命值，并永久提升20%最大生命上限"
+    }
+  ],
+  "story": "猪是前排肉盾型辅助，依靠减益干扰敌人，并在升星时大幅提升自身的承伤能力。"
+}

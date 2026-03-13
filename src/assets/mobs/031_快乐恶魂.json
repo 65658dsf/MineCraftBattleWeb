@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:happy_ghast",
+  "name": "快乐恶魂",
+  "category": "辅助",
+  "baseStats": {
+    "health": 24,
+    "attack": 5.0,
+    "defense": 5,
+    "moveSpeed": 0.29
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.16,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.15
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 24.0,
+        "attack": 5.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 27.8,
+        "attack": 5.7,
+        "skillPowerMultiplier": 1.15
+      },
+      {
+        "star": 3,
+        "health": 31.6,
+        "attack": 6.4,
+        "skillPowerMultiplier": 1.3
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "治愈火球",
+      "type": "主动",
+      "cooldown": 8,
+      "triggerCondition": "自动触发",
+      "description": "吐出一颗粉色的火球，命中友军时治疗他们。",
+      "damageFormula": "治疗攻击力*200%",
+      "skillBackground": "快乐恶魂是恶魂的变种，通常代表着友善。",
+      "effect": "对生命最低的友军发射火球，造成大幅治疗"
+    },
+    {
+      "name": "漂浮",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "飞行生物不受地面陷阱影响。",
+      "damageFormula": "无",
+      "skillBackground": "恶魂是飞行生物。",
+      "effect": "免疫所有地面陷阱和减速地带效果"
+    },
+    {
+      "name": "欢声笑语",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时发出愉悦的叫声，鼓舞全队。",
+      "damageFormula": "无",
+      "skillBackground": "快乐恶魂的叫声不再是哭泣，而是欢笑。",
+      "effect": "使全体友军攻击力和防御力提升15%，持续6秒"
+    }
+  ],
+  "story": "快乐恶魂是远程治疗辅助，能精准抬高队友血线，并提供均衡的团队增益。"
+}

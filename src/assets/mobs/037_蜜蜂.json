@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:bee",
+  "name": "蜜蜂",
+  "category": "中立",
+  "baseStats": {
+    "health": 18,
+    "attack": 6.0,
+    "defense": 3,
+    "moveSpeed": 0.34
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.14,
+      "attackPerStar": 0.17,
+      "skillPowerPerStar": 0.14
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 18.0,
+        "attack": 6.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 20.5,
+        "attack": 7.0,
+        "skillPowerMultiplier": 1.14
+      },
+      {
+        "star": 3,
+        "health": 23.0,
+        "attack": 8.0,
+        "skillPowerMultiplier": 1.28
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "venom_sting",
+      "name": "毒针突刺",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "首次命中时",
+      "description": "刺击附带毒伤，持续消耗目标。",
+      "damageFormula": "基础攻击*1.25+1",
+      "skillBackground": "毒刺是蜜蜂最具威慑力的武器。",
+      "effect": "额外伤害并中毒2秒"
+    },
+    {
+      "id": "swarm_fury",
+      "name": "群蜂狂怒",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "友军阵亡时",
+      "description": "激怒后攻速上升，强化追击。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "群体受损会触发更强攻击性。",
+      "effect": "攻速+18%持续2秒"
+    }
+  ],
+  "story": "蜜蜂是高风险高输出位，爆发强但身板脆。"
+}

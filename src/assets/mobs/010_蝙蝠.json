@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:bat",
+  "name": "蝙蝠",
+  "category": "辅助",
+  "baseStats": {
+    "health": 6,
+    "attack": 1.0,
+    "defense": 0.0,
+    "moveSpeed": 0.45
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.10,
+      "attackPerStar": 0.10,
+      "skillPowerPerStar": 0.20
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 6.0,
+        "attack": 1.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 6.6,
+        "attack": 1.1,
+        "skillPowerMultiplier": 1.2
+      },
+      {
+        "star": 3,
+        "health": 7.2,
+        "attack": 1.2,
+        "skillPowerMultiplier": 1.4
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "声波定位",
+      "type": "主动",
+      "cooldown": 8,
+      "triggerCondition": "自动触发",
+      "description": "发出超声波，暴露敌人的弱点。",
+      "damageFormula": "无",
+      "skillBackground": "蝙蝠利用回声定位在黑暗中飞行。",
+      "effect": "标记所有敌方单位，使其受到的伤害提升20%，并解除隐身状态，持续4秒"
+    },
+    {
+      "name": "超声感知",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "依靠听觉而非视觉，免疫视觉干扰。",
+      "damageFormula": "无",
+      "skillBackground": "蝙蝠在完全黑暗中也能自如行动。",
+      "effect": "自身免疫失明、黑暗效果，且闪避率提升30%"
+    },
+    {
+      "name": "惊扰群飞",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时召唤大群蝙蝠干扰敌人。",
+      "damageFormula": "无",
+      "skillBackground": "蝙蝠群飞通常预示着洞穴深处的危险。",
+      "effect": "召唤蝙蝠群笼罩全场，使所有敌人的命中率降低40%，持续5秒"
+    }
+  ],
+  "story": "蝙蝠虽然脆弱且无伤害，但能提供强大的全队增伤和敌方减益，是极佳的战术辅助。"
+}

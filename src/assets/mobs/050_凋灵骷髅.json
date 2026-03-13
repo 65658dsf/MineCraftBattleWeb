@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:wither_skeleton",
+  "name": "凋灵骷髅",
+  "category": "敌对",
+  "baseStats": {
+    "health": 40,
+    "attack": 11.0,
+    "defense": 8,
+    "moveSpeed": 0.23
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.15,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 40.0,
+        "attack": 11.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 47.2,
+        "attack": 12.7,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 54.4,
+        "attack": 14.3,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "wither_slash",
+      "name": "凋零斩击",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "近战命中时",
+      "description": "重斩附带凋零侵蚀持续伤害。",
+      "damageFormula": "基础攻击*1.28+3",
+      "skillBackground": "黑暗能量让其挥砍更具侵蚀性。",
+      "effect": "附加凋零2秒"
+    },
+    {
+      "id": "ashen_armor",
+      "name": "灰烬骨甲",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "生命低于55%",
+      "description": "骨甲活化，提高短时承伤能力。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "凋零之力会强化骨骼结构。",
+      "effect": "减伤18%持续2秒"
+    }
+  ],
+  "story": "凋灵骷髅是高压重击位，兼具爆发与持续侵蚀。"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:blaze",
+  "name": "烈焰人",
+  "category": "敌对",
+  "baseStats": {
+    "health": 36,
+    "attack": 10.0,
+    "defense": 7,
+    "moveSpeed": 0.26
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.14
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 36.0,
+        "attack": 10.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 42.1,
+        "attack": 11.4,
+        "skillPowerMultiplier": 1.14
+      },
+      {
+        "star": 3,
+        "health": 48.2,
+        "attack": 12.8,
+        "skillPowerMultiplier": 1.28
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "flame_ring",
+      "name": "火环连射",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "开战后每7秒",
+      "description": "短时间连续发射火焰弹幕。",
+      "damageFormula": "基础攻击*1.22+3",
+      "skillBackground": "烈焰核心可快速聚拢多段火团。",
+      "effect": "三段火伤并灼烧"
+    },
+    {
+      "id": "ember_shield",
+      "name": "余烬护体",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "生命低于50%",
+      "description": "火焰环绕，短时降低近战伤害。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "高温外焰可阻挡近身压制。",
+      "effect": "减伤16%持续2秒"
+    }
+  ],
+  "story": "烈焰人是持续AOE法术位，擅长中距离火力覆盖。"
+}

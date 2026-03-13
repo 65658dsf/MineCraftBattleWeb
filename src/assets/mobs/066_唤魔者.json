@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:evoker",
+  "name": "唤魔者",
+  "category": "敌对",
+  "baseStats": {
+    "health": 38,
+    "attack": 9.0,
+    "defense": 8,
+    "moveSpeed": 0.22
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.14
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 38.0,
+        "attack": 9.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 44.5,
+        "attack": 10.3,
+        "skillPowerMultiplier": 1.14
+      },
+      {
+        "star": 3,
+        "health": 50.9,
+        "attack": 11.5,
+        "skillPowerMultiplier": 1.28
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "fang_ritual",
+      "name": "獠牙咒阵",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "战斗中每8秒",
+      "description": "地面召唤咒牙连续突刺。",
+      "damageFormula": "基础攻击*1.28+3",
+      "skillBackground": "咒术可在地面形成连锁獠牙。",
+      "effect": "范围多段伤害"
+    },
+    {
+      "id": "vex_call",
+      "name": "恼鬼召令",
+      "cooldown": 10,
+      "type": "主动",
+      "triggerCondition": "生命低于60%",
+      "description": "召出恼鬼协助围攻关键目标。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "唤魔者善于借召唤物扩大压力。",
+      "effect": "召唤单位并分担火力"
+    }
+  ],
+  "story": "唤魔者是召唤法术核心位，团战影响力极高。"
+}

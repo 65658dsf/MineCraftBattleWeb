@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:drowned",
+  "name": "溺尸",
+  "category": "敌对",
+  "baseStats": {
+    "health": 34,
+    "attack": 8.0,
+    "defense": 7,
+    "moveSpeed": 0.23
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 34.0,
+        "attack": 8.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 40.1,
+        "attack": 9.1,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 46.2,
+        "attack": 10.2,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "tidal_trident",
+      "name": "潮叉猛掷",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "中距离目标存在时",
+      "description": "投掷潮叉造成贯穿伤害。",
+      "damageFormula": "基础攻击*1.3+2",
+      "skillBackground": "水下狩猎让其精于投掷攻击。",
+      "effect": "额外伤害并短暂减速"
+    },
+    {
+      "id": "drown_grip",
+      "name": "窒息缠握",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "近战命中后",
+      "description": "抓握目标，压制其移动能力。",
+      "damageFormula": "基础攻击*1.15+1",
+      "skillBackground": "拖拽猎物下沉是其常见战法。",
+      "effect": "定身0.6秒"
+    }
+  ],
+  "story": "溺尸是控制型敌对近战，擅长限制位移并打持续压制。"
+}

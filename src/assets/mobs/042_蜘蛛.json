@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:spider",
+  "name": "蜘蛛",
+  "category": "中立",
+  "baseStats": {
+    "health": 26,
+    "attack": 6.0,
+    "defense": 5,
+    "moveSpeed": 0.31
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 26.0,
+        "attack": 6.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 30.4,
+        "attack": 6.8,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 34.8,
+        "attack": 7.7,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "web_snare",
+      "name": "蛛网缠束",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "中距离目标出现",
+      "description": "喷网束缚目标，限制位移。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "吐丝能力让蜘蛛拥有先手控制。",
+      "effect": "定身0.8秒"
+    },
+    {
+      "id": "pounce_strike",
+      "name": "扑跃猛袭",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "目标被控时",
+      "description": "跳扑补伤，强化收割效率。",
+      "damageFormula": "基础攻击*1.3+1",
+      "skillBackground": "蜘蛛在猎物受限时会爆发扑杀。",
+      "effect": "额外伤害并击退"
+    }
+  ],
+  "story": "蜘蛛是控制先手位，依靠网控衔接扑击完成击杀。"
+}

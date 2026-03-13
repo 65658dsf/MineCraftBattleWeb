@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:elder_guardian",
+  "name": "远古守卫者",
+  "category": "敌对",
+  "baseStats": {
+    "health": 90,
+    "attack": 14.0,
+    "defense": 16,
+    "moveSpeed": 0.18
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.11,
+      "skillPowerPerStar": 0.1
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 90.0,
+        "attack": 14.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 106.2,
+        "attack": 15.5,
+        "skillPowerMultiplier": 1.1
+      },
+      {
+        "star": 3,
+        "health": 122.4,
+        "attack": 17.1,
+        "skillPowerMultiplier": 1.2
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "elder_beam",
+      "name": "古卫禁射",
+      "cooldown": 9,
+      "type": "主动",
+      "triggerCondition": "开战后每9秒",
+      "description": "释放强化射线压制最高威胁目标。",
+      "damageFormula": "基础攻击*1.35+5",
+      "skillBackground": "远古个体可稳定维持高功率射线。",
+      "effect": "高伤并沉默1秒"
+    },
+    {
+      "id": "abyss_pressure",
+      "name": "深海压迫",
+      "cooldown": 10,
+      "type": "被动",
+      "triggerCondition": "自身生命低于60%",
+      "description": "全场威压降低敌方攻速。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "古老海渊威压会影响周围生物节奏。",
+      "effect": "敌方攻速-12%持续2秒"
+    }
+  ],
+  "story": "远古守卫者是超重装Boss位，兼具硬度与团队压制。"
+}

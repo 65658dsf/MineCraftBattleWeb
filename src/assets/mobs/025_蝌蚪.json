@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:tadpole",
+  "name": "蝌蚪",
+  "category": "辅助",
+  "baseStats": {
+    "health": 10,
+    "attack": 1.0,
+    "defense": 1,
+    "moveSpeed": 0.34
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.12,
+      "attackPerStar": 0.2,
+      "skillPowerPerStar": 0.18
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 10.0,
+        "attack": 1.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 11.2,
+        "attack": 1.2,
+        "skillPowerMultiplier": 1.18
+      },
+      {
+        "star": 3,
+        "health": 12.4,
+        "attack": 1.4,
+        "skillPowerMultiplier": 1.36
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "慌张游动",
+      "type": "主动",
+      "cooldown": 5,
+      "triggerCondition": "受击时",
+      "description": "受到惊吓时疯狂游动。",
+      "damageFormula": "无",
+      "skillBackground": "蝌蚪受到伤害会四处乱窜。",
+      "effect": "受到攻击后，移动速度提升50%，持续2秒"
+    },
+    {
+      "name": "水生幼体",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "极小的体型让它难以被击中。",
+      "damageFormula": "闪避+20%",
+      "skillBackground": "蝌蚪体型很小，判定箱也很小。",
+      "effect": "自身闪避率永久提升20%"
+    },
+    {
+      "name": "变态发育",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时瞬间成长为青蛙，战斗力质变。",
+      "damageFormula": "全属性提升",
+      "skillBackground": "蝌蚪最终会变态发育成为青蛙。",
+      "effect": "升星后，本场战斗的基础属性（血量、攻击、防御）翻倍"
+    }
+  ],
+  "story": "蝌蚪是成长型辅助，前期极其脆弱，但通过升星发育能成为强力的战士。"
+}

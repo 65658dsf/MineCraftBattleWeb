@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:cow",
+  "name": "牛",
+  "category": "辅助",
+  "baseStats": {
+    "health": 42,
+    "attack": 5.0,
+    "defense": 11,
+    "moveSpeed": 0.18
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.22,
+      "attackPerStar": 0.11,
+      "skillPowerPerStar": 0.1
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 42.0,
+        "attack": 5.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 51.2,
+        "attack": 5.6,
+        "skillPowerMultiplier": 1.1
+      },
+      {
+        "star": 3,
+        "health": 60.5,
+        "attack": 6.1,
+        "skillPowerMultiplier": 1.2
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "牛乳甘霖",
+      "type": "主动",
+      "cooldown": 10,
+      "triggerCondition": "自动触发",
+      "description": "每隔一段时间驱除己方队伍中随机目标的负面效果。",
+      "damageFormula": "无",
+      "skillBackground": "牛奶在Minecraft中可以清除所有状态效果。",
+      "effect": "随机解除己方[当前星级]个目标的负面状态"
+    },
+    {
+      "name": "坚韧牛皮",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "牛本身免疫所有负面状态。",
+      "damageFormula": "无",
+      "skillBackground": "牛既然产奶，自身对异常状态有极强的抵抗力。",
+      "effect": "自身免疫所有Debuff（减速、中毒、燃烧等）"
+    },
+    {
+      "name": "丰饶恩赐",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时立即为我方全体驱除一次debuff并提供持续恢复。",
+      "damageFormula": "每秒回复=最大生命*3%",
+      "skillBackground": "象征丰收与健康的牛，在进阶时带来全队的净化与滋养。",
+      "effect": "清除己方全体所有负面状态，并获得持续5秒的生命恢复效果"
+    }
+  ],
+  "story": "牛是专职的净化辅助，能有效克制依赖持续伤害和控制的敌方阵容，升星后更是全队的强力医官。"
+}

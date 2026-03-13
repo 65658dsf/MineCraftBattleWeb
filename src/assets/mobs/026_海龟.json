@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:turtle",
+  "name": "海龟",
+  "category": "辅助",
+  "baseStats": {
+    "health": 48,
+    "attack": 4.0,
+    "defense": 14,
+    "moveSpeed": 0.15
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.22,
+      "attackPerStar": 0.1,
+      "skillPowerPerStar": 0.1
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 48.0,
+        "attack": 4.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 58.6,
+        "attack": 4.4,
+        "skillPowerMultiplier": 1.1
+      },
+      {
+        "star": 3,
+        "health": 69.1,
+        "attack": 4.8,
+        "skillPowerMultiplier": 1.2
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "缩壳防御",
+      "type": "主动",
+      "cooldown": 12,
+      "triggerCondition": "自动触发",
+      "description": "缩入壳中，大幅提升防御力。",
+      "damageFormula": "无",
+      "skillBackground": "海龟壳是坚硬的防具。",
+      "effect": "使自身在3秒内无法移动和攻击，但受到的伤害降低80%"
+    },
+    {
+      "name": "神龟药水",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "自带抗性提升。",
+      "damageFormula": "防御+10%",
+      "skillBackground": "海龟壳可以酿造神龟药水（抗性提升IV，缓慢IV）。",
+      "effect": "自身受到的物理伤害永久降低15%"
+    },
+    {
+      "name": "长者赐福",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时将长寿的秘诀分享给队友。",
+      "damageFormula": "无",
+      "skillBackground": "海龟象征着长寿与坚韧。",
+      "effect": "使当前生命值最低的友军获得“抗性提升III”（减伤60%），持续5秒"
+    }
+  ],
+  "story": "海龟是极致的坦克型辅助，自身硬度极高，并能在关键时刻保护残血队友。"
+}

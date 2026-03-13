@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:skeleton",
+  "name": "骷髅",
+  "category": "敌对",
+  "baseStats": {
+    "health": 28,
+    "attack": 9.0,
+    "defense": 5,
+    "moveSpeed": 0.24
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.16,
+      "attackPerStar": 0.16,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 28.0,
+        "attack": 9.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 32.5,
+        "attack": 10.4,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 37.0,
+        "attack": 11.9,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "rapid_arrow",
+      "name": "连发箭雨",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "中距离目标存在",
+      "description": "快速连射压低目标血线。",
+      "damageFormula": "基础攻击*1.2+2",
+      "skillBackground": "长期弓术训练带来稳定输出。",
+      "effect": "连续两段伤害"
+    },
+    {
+      "id": "bone_guard",
+      "name": "骨架格挡",
+      "cooldown": 8,
+      "type": "被动",
+      "triggerCondition": "被近战贴脸",
+      "description": "抬弓格挡减少一次近战伤害。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "骨架结构可短时抗住冲击。",
+      "effect": "减免一次伤害30%"
+    }
+  ],
+  "story": "骷髅是远程火力位，爆发高但抗压较弱。"
+}

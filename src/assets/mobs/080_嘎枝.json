@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:creaking",
+  "name": "嘎枝",
+  "category": "敌对",
+  "baseStats": {
+    "health": 58,
+    "attack": 10.0,
+    "defense": 13,
+    "moveSpeed": 0.2
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.11
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 58.0,
+        "attack": 10.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 68.4,
+        "attack": 11.2,
+        "skillPowerMultiplier": 1.11
+      },
+      {
+        "star": 3,
+        "health": 78.9,
+        "attack": 12.4,
+        "skillPowerMultiplier": 1.22
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "wooden_grab",
+      "name": "木肢缠握",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "近战命中后",
+      "description": "木肢抓缠限制敌方移动。",
+      "damageFormula": "基础攻击*1.2+2",
+      "skillBackground": "扭曲木肢可在命中后迅速缠绕。",
+      "effect": "定身0.7秒"
+    },
+    {
+      "id": "creak_armor",
+      "name": "吱响硬壳",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "受到暴击时",
+      "description": "木壳绷紧降低后续所受伤害。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "木质外甲在受压时会短暂硬化。",
+      "effect": "减伤20%持续2秒"
+    }
+  ],
+  "story": "嘎枝是木系控制坦位，擅长拖住前排并消耗。"
+}

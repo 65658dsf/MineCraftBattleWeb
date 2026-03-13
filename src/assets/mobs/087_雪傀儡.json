@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:snow_golem",
+  "name": "雪傀儡",
+  "category": "无差别",
+  "baseStats": {
+    "health": 26,
+    "attack": 6.0,
+    "defense": 6,
+    "moveSpeed": 0.25
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.16,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.14
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 26.0,
+        "attack": 6.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 30.2,
+        "attack": 6.8,
+        "skillPowerMultiplier": 1.14
+      },
+      {
+        "star": 3,
+        "health": 34.3,
+        "attack": 7.7,
+        "skillPowerMultiplier": 1.28
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "snow_barrage",
+      "name": "雪球连发",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "中距离目标存在",
+      "description": "快速抛射雪球造成减速压制。",
+      "damageFormula": "基础攻击*1.16+1",
+      "skillBackground": "持续抛投让雪傀儡有稳定控场力。",
+      "effect": "额外伤害并减速1.2秒"
+    },
+    {
+      "id": "frost_coat",
+      "name": "霜甲附着",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "被近战命中",
+      "description": "寒霜反冲降低攻击者攻速。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "低温外壳会让近身者动作迟缓。",
+      "effect": "敌方攻速-12%持续1秒"
+    }
+  ],
+  "story": "雪傀儡是远程控制位，偏减速牵制与风筝。"
+}

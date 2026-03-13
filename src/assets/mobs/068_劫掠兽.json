@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:ravager",
+  "name": "劫掠兽",
+  "category": "敌对",
+  "baseStats": {
+    "health": 80,
+    "attack": 13.0,
+    "defense": 14,
+    "moveSpeed": 0.22
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.19,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.1
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 80.0,
+        "attack": 13.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 95.2,
+        "attack": 14.6,
+        "skillPowerMultiplier": 1.1
+      },
+      {
+        "star": 3,
+        "health": 110.4,
+        "attack": 16.1,
+        "skillPowerMultiplier": 1.2
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "brutal_charge",
+      "name": "蛮横冲锋",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "直线目标存在时",
+      "description": "强行冲破阵线并击飞路径敌人。",
+      "damageFormula": "基础攻击*1.28+4",
+      "skillBackground": "巨体冲锋可轻易打散密集站位。",
+      "effect": "范围击飞与高伤"
+    },
+    {
+      "id": "thick_hide_roar",
+      "name": "厚皮怒嚎",
+      "cooldown": 10,
+      "type": "被动",
+      "triggerCondition": "生命低于50%",
+      "description": "怒嚎后提高减伤与控制抗性。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "受伤时更容易进入失控暴走。",
+      "effect": "减伤20%并韧性提升2秒"
+    }
+  ],
+  "story": "劫掠兽是攻城坦克位，正面突破和承伤能力极强。"
+}

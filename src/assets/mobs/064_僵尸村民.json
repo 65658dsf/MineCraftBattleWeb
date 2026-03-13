@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:zombie_villager",
+  "name": "僵尸村民",
+  "category": "敌对",
+  "baseStats": {
+    "health": 32,
+    "attack": 7.0,
+    "defense": 7,
+    "moveSpeed": 0.22
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.13,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 32.0,
+        "attack": 7.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 37.8,
+        "attack": 7.9,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 43.5,
+        "attack": 8.8,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "infectious_claw",
+      "name": "感染抓击",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "近战命中时",
+      "description": "抓击附带感染，持续削弱目标。",
+      "damageFormula": "基础攻击*1.2+2",
+      "skillBackground": "尸化后抓击更易造成持续损伤。",
+      "effect": "流血并减疗1秒"
+    },
+    {
+      "id": "undead_resolve",
+      "name": "亡者执念",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "生命低于40%",
+      "description": "短时提高减伤与韧性。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "残存意志让其在濒危时更顽强。",
+      "effect": "减伤18%持续2秒"
+    }
+  ],
+  "story": "僵尸村民是稳健前压位，偏持续侵蚀与抗压。"
+}

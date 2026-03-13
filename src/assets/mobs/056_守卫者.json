@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:guardian",
+  "name": "守卫者",
+  "category": "敌对",
+  "baseStats": {
+    "health": 44,
+    "attack": 10.0,
+    "defense": 12,
+    "moveSpeed": 0.2
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.2,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.11
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 44.0,
+        "attack": 10.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 52.8,
+        "attack": 11.2,
+        "skillPowerMultiplier": 1.11
+      },
+      {
+        "star": 3,
+        "health": 61.6,
+        "attack": 12.4,
+        "skillPowerMultiplier": 1.22
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "beam_focus",
+      "name": "棱镜射线",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "中距离锁定时",
+      "description": "蓄能后发射高伤射线。",
+      "damageFormula": "基础攻击*1.3+3",
+      "skillBackground": "体内棱镜器官可聚焦强能量束。",
+      "effect": "额外伤害并破防1秒"
+    },
+    {
+      "id": "spike_shell",
+      "name": "棘刺硬壳",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "被近战命中",
+      "description": "硬壳反伤并降低攻击者攻速。",
+      "damageFormula": "反伤=基础攻击*0.35",
+      "skillBackground": "外壳尖刺可在受击时反制敌人。",
+      "effect": "反伤并降攻速1秒"
+    }
+  ],
+  "story": "守卫者是高防中程炮台位，擅长反近战和定点压制。"
+}

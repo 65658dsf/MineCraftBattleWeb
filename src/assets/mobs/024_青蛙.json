@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:frog",
+  "name": "青蛙",
+  "category": "辅助",
+  "baseStats": {
+    "health": 19,
+    "attack": 4.0,
+    "defense": 5,
+    "moveSpeed": 0.32
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.14
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 19.0,
+        "attack": 4.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 22.2,
+        "attack": 4.6,
+        "skillPowerMultiplier": 1.14
+      },
+      {
+        "star": 3,
+        "health": 25.5,
+        "attack": 5.1,
+        "skillPowerMultiplier": 1.28
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "长舌捕食",
+      "type": "主动",
+      "cooldown": 8,
+      "triggerCondition": "自动触发",
+      "description": "弹射长舌，将远处的敌人拉向自己。",
+      "damageFormula": "星级*0.5*基础攻击*1.2",
+      "skillBackground": "青蛙捕食时会吐出长舌头将猎物卷入口中。",
+      "effect": "将最远的一名敌人拉至身前，并造成伤害"
+    },
+    {
+      "name": "抗毒体质",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "常年生活在沼泽，对毒素免疫。",
+      "damageFormula": "无",
+      "skillBackground": "青蛙不惧怕蜜蜂的毒刺。",
+      "effect": "自身免疫中毒和凋零效果"
+    },
+    {
+      "name": "吞噬岩浆",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时吐出闪耀的蛙明灯。",
+      "damageFormula": "无",
+      "skillBackground": "青蛙吞噬岩浆怪会掉落蛙明灯。",
+      "effect": "在原地生成一个持续6秒的“蛙明灯光环”，光环内的友军每秒恢复8%生命"
+    }
+  ],
+  "story": "青蛙是位移控制辅助，能破坏敌方站位，并在升星时提供阵地治疗。"
+}

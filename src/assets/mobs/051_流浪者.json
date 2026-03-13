@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:stray",
+  "name": "流浪者",
+  "category": "敌对",
+  "baseStats": {
+    "health": 30,
+    "attack": 9.0,
+    "defense": 6,
+    "moveSpeed": 0.22
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.16,
+      "attackPerStar": 0.15,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 30.0,
+        "attack": 9.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 34.8,
+        "attack": 10.4,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 39.6,
+        "attack": 11.7,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "frost_arrow",
+      "name": "霜冻箭",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "远程命中时",
+      "description": "寒箭减速并压制目标机动。",
+      "damageFormula": "基础攻击*1.18+2",
+      "skillBackground": "极寒环境让箭矢自带冰霜效果。",
+      "effect": "减速1.5秒"
+    },
+    {
+      "id": "cold_focus",
+      "name": "寒域专注",
+      "cooldown": 8,
+      "type": "被动",
+      "triggerCondition": "目标被减速时",
+      "description": "对受寒目标造成更高伤害。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "流浪者擅长在冰冻节奏中扩大战果。",
+      "effect": "对减速目标伤害+12%"
+    }
+  ],
+  "story": "流浪者是控制型射手，靠减速链打出稳定压制。"
+}

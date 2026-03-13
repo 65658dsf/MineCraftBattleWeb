@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:villager",
+  "name": "村民",
+  "category": "辅助",
+  "baseStats": {
+    "health": 22,
+    "attack": 2.0,
+    "defense": 5,
+    "moveSpeed": 0.22
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.16
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 22.0,
+        "attack": 2.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 25.7,
+        "attack": 2.2,
+        "skillPowerMultiplier": 1.16
+      },
+      {
+        "star": 3,
+        "health": 29.4,
+        "attack": 2.5,
+        "skillPowerMultiplier": 1.32
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "紧急交易",
+      "type": "主动",
+      "cooldown": 9,
+      "triggerCondition": "自动触发",
+      "description": "扔出一瓶治疗药水或速度药水给队友。",
+      "damageFormula": "无",
+      "skillBackground": "村民可以与玩家交易获得各种物品，包括药水。",
+      "effect": "随机使一名友军获得“生命恢复（每秒恢复该生物最大生命值的3%）”或“速度提升（提高速度20%）”效果，持续4秒"
+    },
+    {
+      "name": "铁哥救我",
+      "type": "被动",
+      "cooldown": 30,
+      "triggerCondition": "生命低于30%",
+      "description": "受到威胁时，呼唤铁傀儡保护。",
+      "damageFormula": "召唤",
+      "skillBackground": "村民通过铁哥救我可以召唤铁傀儡生成。",
+      "effect": "召唤一只持续3秒的铁傀儡协助战斗（每场战斗限一次）"
+    },
+    {
+      "name": "村庄英雄",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时大幅降低交易成本（技能冷却）。",
+      "damageFormula": "冷却缩减",
+      "skillBackground": "拥有村庄英雄buff的玩家与村民交易会有巨大折扣。",
+      "effect": "立即使全体友军的所有技能冷却时间减少50%"
+    }
+  ],
+  "story": "村民是召唤与冷却缩减型辅助，铁傀儡能有效救场，升星后的冷却缩减能带来团队技能爆发。"
+}

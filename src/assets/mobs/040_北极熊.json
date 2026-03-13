@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:polar_bear",
+  "name": "北极熊",
+  "category": "中立",
+  "baseStats": {
+    "health": 52,
+    "attack": 9.0,
+    "defense": 12,
+    "moveSpeed": 0.23
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.2,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.1
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 52.0,
+        "attack": 9.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 62.4,
+        "attack": 10.1,
+        "skillPowerMultiplier": 1.1
+      },
+      {
+        "star": 3,
+        "health": 72.8,
+        "attack": 11.2,
+        "skillPowerMultiplier": 1.2
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "ice_roar",
+      "name": "寒域咆哮",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "开战3秒后",
+      "description": "咆哮震慑周围目标，压低其攻速。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "极地领主的威压可直接扰乱敌意。",
+      "effect": "范围敌方攻速下降2秒"
+    },
+    {
+      "id": "frost_paw",
+      "name": "霜爪拍击",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "近战命中时",
+      "description": "重爪附寒击，造成高额前排伤害。",
+      "damageFormula": "基础攻击*1.25+3",
+      "skillBackground": "厚掌爆发力在近战中极具破坏力。",
+      "effect": "额外伤害并减速1秒"
+    }
+  ],
+  "story": "北极熊是重装压制位，适合正面推进与团战控场。"
+}

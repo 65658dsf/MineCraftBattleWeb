@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:ocelot",
+  "name": "豹猫",
+  "category": "辅助",
+  "baseStats": {
+    "health": 18,
+    "attack": 4.0,
+    "defense": 2.0,
+    "moveSpeed": 0.38
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.16,
+      "attackPerStar": 0.15,
+      "skillPowerPerStar": 0.14
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 18.0,
+        "attack": 4.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 20.8,
+        "attack": 4.6,
+        "skillPowerMultiplier": 1.14
+      },
+      {
+        "star": 3,
+        "health": 23.6,
+        "attack": 5.2,
+        "skillPowerMultiplier": 1.28
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "雨林突袭",
+      "type": "主动",
+      "cooldown": 8,
+      "triggerCondition": "自动触发",
+      "description": "利用速度优势快速突袭最虚弱的敌人。",
+      "damageFormula": "星级*0.5*基础攻击*1.8",
+      "skillBackground": "豹猫是丛林中的敏捷猎手，速度极快。",
+      "effect": "冲刺至生命值最低的敌人面前造成伤害，并使其流血（每秒受到攻击力50%伤害）持续3秒"
+    },
+    {
+      "name": "神出鬼没",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "移动时",
+      "description": "高速移动中难以被锁定。",
+      "damageFormula": "闪避+40%",
+      "skillBackground": "野生豹猫非常害羞且难以捕捉，稍有动静就会逃跑。",
+      "effect": "在移动状态下，闪避率提升40%"
+    },
+    {
+      "name": "信任建立",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时与最近的队友建立信任连接。",
+      "damageFormula": "无",
+      "skillBackground": "通过喂食生鱼可以驯服豹猫，建立信任。",
+      "effect": "与最近的一名友军连接，双方在10秒内共享20%的攻击力和防御力加成"
+    }
+  ],
+  "story": "豹猫是进攻型辅助，擅长补刀残血，并通过升星技能与核心队友形成双核联动。"
+}

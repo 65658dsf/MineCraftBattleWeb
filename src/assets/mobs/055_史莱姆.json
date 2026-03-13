@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:slime",
+  "name": "史莱姆",
+  "category": "敌对",
+  "baseStats": {
+    "health": 36,
+    "attack": 6.0,
+    "defense": 9,
+    "moveSpeed": 0.2
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.2,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.11
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 36.0,
+        "attack": 6.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 43.2,
+        "attack": 6.7,
+        "skillPowerMultiplier": 1.11
+      },
+      {
+        "star": 3,
+        "health": 50.4,
+        "attack": 7.4,
+        "skillPowerMultiplier": 1.22
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "gel_split",
+      "name": "胶质分裂",
+      "cooldown": 10,
+      "type": "被动",
+      "triggerCondition": "生命低于35%",
+      "description": "分裂出小体，分担部分伤害。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "胶质结构让其可通过分裂延命。",
+      "effect": "减伤20%持续2秒"
+    },
+    {
+      "id": "sticky_slam",
+      "name": "粘液重拍",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "近战命中时",
+      "description": "拍击附带黏滞，限制目标移动。",
+      "damageFormula": "基础攻击*1.2+2",
+      "skillBackground": "高粘度体液会拖慢被击中目标。",
+      "effect": "额外伤害并减速1秒"
+    }
+  ],
+  "story": "史莱姆是持续缠斗位，靠高韧性与减速磨死对手。"
+}

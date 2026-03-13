@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:fox",
+  "name": "狐狸",
+  "category": "辅助",
+  "baseStats": {
+    "health": 16,
+    "attack": 3.8,
+    "defense": 2.0,
+    "moveSpeed": 0.36
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.16,
+      "skillPowerPerStar": 0.15
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 16.0,
+        "attack": 3.8,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 18.7,
+        "attack": 4.4,
+        "skillPowerMultiplier": 1.15
+      },
+      {
+        "star": 3,
+        "health": 21.4,
+        "attack": 5.0,
+        "skillPowerMultiplier": 1.30
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "浆果大餐",
+      "type": "主动",
+      "cooldown": 10,
+      "triggerCondition": "自动触发",
+      "description": "掏出甜浆果进食，恢复自身状态。",
+      "damageFormula": "回复最大生命*20%",
+      "skillBackground": "狐狸喜欢吃甜浆果，并且嘴里经常叼着食物。",
+      "effect": "自身回复20%生命值。如果生命值已满，则将浆果扔给生命最低的队友。"
+    },
+    {
+      "name": "雪地伪装",
+      "type": "被动",
+      "cooldown": 5,
+      "triggerCondition": "未攻击时",
+      "description": "静止或未攻击时进入伪装状态。",
+      "damageFormula": "无",
+      "skillBackground": "雪狐在雪地中极难被发现，它们习惯在白天睡觉。",
+      "effect": "若2秒内未受到伤害且未攻击，进入隐身状态，下次攻击造成双倍伤害"
+    },
+    {
+      "name": "精准扑杀",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时高高跃起，扑向猎物。",
+      "damageFormula": "攻击力*300%",
+      "skillBackground": "狐狸标志性的捕猎动作是高高跃起然后头朝下扎入雪中。",
+      "effect": "立即瞬移至生命值最低的敌人处，造成300%伤害并禁锢目标2秒"
+    }
+  ],
+  "story": "狐狸是具有刺客属性的辅助，具备自我续航能力，升星后的斩杀效果能有效处理敌方残血。"
+}

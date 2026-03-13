@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:killer_rabbit",
+  "name": "杀手兔",
+  "category": "敌对",
+  "baseStats": {
+    "health": 20,
+    "attack": 11.0,
+    "defense": 4,
+    "moveSpeed": 0.38
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.14,
+      "attackPerStar": 0.17,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 20.0,
+        "attack": 11.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 22.8,
+        "attack": 12.9,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 25.6,
+        "attack": 14.7,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "rabbit_assault",
+      "name": "疯跃连斩",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "接敌后",
+      "description": "连续跳斩造成高频爆发伤害。",
+      "damageFormula": "基础攻击*1.3+2",
+      "skillBackground": "异常攻击性让其出手极快。",
+      "effect": "两段额外伤害"
+    },
+    {
+      "id": "panic_instinct",
+      "name": "狂性本能",
+      "cooldown": 8,
+      "type": "被动",
+      "triggerCondition": "生命低于40%",
+      "description": "濒危时攻速显著提升。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "极端状态会触发更强求生攻击。",
+      "effect": "攻速+22%持续2秒"
+    }
+  ],
+  "story": "杀手兔是极端刺客位，爆发高但生存较差。"
+}

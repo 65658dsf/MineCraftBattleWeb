@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:allay",
+  "name": "悦灵",
+  "category": "辅助",
+  "baseStats": {
+    "health": 15,
+    "attack": 2.0,
+    "defense": 4,
+    "moveSpeed": 0.39
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.14,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.18
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 15.0,
+        "attack": 2.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 17.1,
+        "attack": 2.3,
+        "skillPowerMultiplier": 1.18
+      },
+      {
+        "star": 3,
+        "health": 19.2,
+        "attack": 2.6,
+        "skillPowerMultiplier": 1.36
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "物品递送",
+      "type": "主动",
+      "cooldown": 6,
+      "triggerCondition": "自动触发",
+      "description": "搜寻并递送恢复物品给队友。",
+      "damageFormula": "治疗",
+      "skillBackground": "悦灵会收集物品并扔给玩家。",
+      "effect": "为随机一名友军恢复15%最大生命值"
+    },
+    {
+      "name": "音符共鸣",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "友军释放技能时",
+      "description": "听到技能的声音会感到愉悦。",
+      "damageFormula": "无",
+      "skillBackground": "悦灵喜欢音符盒的声音。",
+      "effect": "每当周围有友军释放技能，自身恢复5%生命并获得1秒加速"
+    },
+    {
+      "name": "复制分身",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时分裂出一个暂时的分身。",
+      "damageFormula": "无",
+      "skillBackground": "给予悦灵紫水晶碎片并播放音乐，它会自我复制。",
+      "effect": "创造一个持续10秒的分身，分身拥有本体50%的属性，且能释放“物品递送”"
+    }
+  ],
+  "story": "悦灵是高频治疗辅助，通过不断递送补给维持团队血线，升星后的双倍快乐更是强力。"
+}

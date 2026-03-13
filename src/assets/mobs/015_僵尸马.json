@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:zombie_horse",
+  "name": "僵尸马",
+  "category": "辅助",
+  "baseStats": {
+    "health": 38,
+    "attack": 10.0,
+    "defense": 8,
+    "moveSpeed": 0.28
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.19,
+      "attackPerStar": 0.13,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 38.0,
+        "attack": 6.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 45.2,
+        "attack": 6.8,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 52.4,
+        "attack": 7.6,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "亡骸冲撞",
+      "type": "主动",
+      "cooldown": 8,
+      "triggerCondition": "自动触发",
+      "description": "带着腐烂的气息冲向敌人。",
+      "damageFormula": "星级*0.5*基础攻击*1.2",
+      "skillBackground": "僵尸马是未被使用的游戏素材，浑身散发着腐烂气息。",
+      "effect": "冲撞路径上的敌人，并施加中毒效果（每秒造成攻击力30%的伤害），持续4秒"
+    },
+    {
+      "name": "死而不僵",
+      "type": "被动",
+      "cooldown": 5,
+      "triggerCondition": "未受击时",
+      "description": "亡灵生物在战斗间隙快速重组肉体。",
+      "damageFormula": "每秒回复2%",
+      "skillBackground": "亡灵生物对伤害药水有反应，这里体现为自我修复。",
+      "effect": "若3秒内未受到伤害，每秒回复2%最大生命值"
+    },
+    {
+      "name": "尸群呼唤",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时发出嘶吼，唤来同类。",
+      "damageFormula": "无",
+      "skillBackground": "僵尸通常成群结队出现。",
+      "effect": "召唤2只弱化的僵尸（拥有本体30%属性）协助战斗，持续10秒"
+    }
+  ],
+  "story": "僵尸马是召唤系坦克，通过中毒削弱敌人，并在升星时制造人海战术分担伤害。"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:llama",
+  "name": "羊驼",
+  "category": "中立",
+  "baseStats": {
+    "health": 30,
+    "attack": 4.0,
+    "defense": 7,
+    "moveSpeed": 0.24
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.13,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 30.0,
+        "attack": 4.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 35.4,
+        "attack": 4.5,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 40.8,
+        "attack": 5.0,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "spit_barrage",
+      "name": "唾沫连喷",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "中距离目标出现时",
+      "description": "连续喷吐削弱目标命中与防御。",
+      "damageFormula": "基础攻击*1.12+1",
+      "skillBackground": "羊驼的唾喷可持续干扰敌方状态。",
+      "effect": "额外伤害并降命中1秒"
+    },
+    {
+      "id": "pack_guard",
+      "name": "驮队守势",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "友军靠近时",
+      "description": "团队站位紧凑时提高自身防御。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "群体防御本能让其更擅长协同。",
+      "effect": "防御+3持续2秒"
+    }
+  ],
+  "story": "羊驼是中程干扰位，能在团战中持续提供削弱效果。"
+}

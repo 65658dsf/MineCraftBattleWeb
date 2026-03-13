@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:wolf",
+  "name": "狼",
+  "category": "中立",
+  "baseStats": {
+    "health": 28,
+    "attack": 7.0,
+    "defense": 6,
+    "moveSpeed": 0.34
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.15,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 28.0,
+        "attack": 7.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 32.8,
+        "attack": 8.1,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 37.5,
+        "attack": 9.1,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "pack_howl",
+      "name": "狼群嚎令",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "友军接近时",
+      "description": "发出嚎叫，提高附近友军攻速。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "群狼协同狩猎依赖统一号令。",
+      "effect": "友军攻速+12%持续2秒"
+    },
+    {
+      "id": "throat_bite",
+      "name": "锁喉撕咬",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "背后命中时",
+      "description": "咬住要害打出高额单体伤害。",
+      "damageFormula": "基础攻击*1.28+1",
+      "skillBackground": "狼擅长通过咬合迅速结束战斗。",
+      "effect": "额外伤害并流血1秒"
+    }
+  ],
+  "story": "狼是协同突击位，兼具团队增幅和收割能力。"
+}

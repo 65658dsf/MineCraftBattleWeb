@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:wandering_trader",
+  "name": "流浪商人",
+  "category": "辅助",
+  "baseStats": {
+    "health": 20,
+    "attack": 2.0,
+    "defense": 4,
+    "moveSpeed": 0.24
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.16,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.17
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 20.0,
+        "attack": 2.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 23.2,
+        "attack": 2.2,
+        "skillPowerMultiplier": 1.17
+      },
+      {
+        "star": 3,
+        "health": 26.4,
+        "attack": 2.5,
+        "skillPowerMultiplier": 1.34
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "隐身药水",
+      "type": "主动",
+      "cooldown": 15,
+      "triggerCondition": "受击时",
+      "description": "受到攻击时喝下隐身药水。",
+      "damageFormula": "无",
+      "skillBackground": "流浪商人在黄昏或受到攻击时会喝隐身药水。",
+      "effect": "进入隐身状态（无法被选中），持续3秒，并清除仇恨"
+    },
+    {
+      "name": "行商羊驼",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "总是带着两只羊驼护卫。",
+      "damageFormula": "召唤",
+      "skillBackground": "流浪商人总是牵着两只行商羊驼。",
+      "effect": "战斗开始时召唤2只行商羊驼（远程吐口水攻击），羊驼拥有本体30%属性"
+    },
+    {
+      "name": "绝版好货",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时拿出一件极其珍贵的商品。",
+      "damageFormula": "无",
+      "skillBackground": "虽然流浪商人常被叫奸商，但偶尔也有好东西。",
+      "effect": "为己方全体提供“不死图腾”效果（抵挡一次致死伤害并回血），持续5秒"
+    }
+  ],
+  "story": "流浪商人是生存能力极强的召唤师，自带保镖和保命技能，升星后的群体免死更是翻盘神技。"
+}

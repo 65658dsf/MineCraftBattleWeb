@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:armadillo",
+  "name": "犰狳",
+  "category": "辅助",
+  "baseStats": {
+    "health": 26,
+    "attack": 3.0,
+    "defense": 13,
+    "moveSpeed": 0.21
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.1,
+      "skillPowerPerStar": 0.11
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 26.0,
+        "attack": 3.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 30.7,
+        "attack": 3.3,
+        "skillPowerMultiplier": 1.11
+      },
+      {
+        "star": 3,
+        "health": 35.4,
+        "attack": 3.6,
+        "skillPowerMultiplier": 1.22
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "滚壳撞击",
+      "type": "主动",
+      "cooldown": 9,
+      "triggerCondition": "自动触发",
+      "description": "缩成球体向前滚动撞击。",
+      "damageFormula": "星级*0.5*基础攻击*1.2",
+      "skillBackground": "犰狳受惊时会卷成球。",
+      "effect": "对路径上的敌人造成伤害并击退"
+    },
+    {
+      "name": "鳞甲",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "坚硬的鳞甲提供额外防护。",
+      "damageFormula": "防御",
+      "skillBackground": "犰狳掉落的鳞甲可以制作狼铠。",
+      "effect": "自身受到的物理伤害降低20%"
+    },
+    {
+      "name": "狼铠赠礼",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时为最强的队友装备狼铠。",
+      "damageFormula": "护盾",
+      "skillBackground": "狼铠能为狼提供极高的防御。",
+      "effect": "为攻击力最高的友军提供一个相当于其最大生命值50%的巨额护盾，持续10秒"
+    }
+  ],
+  "story": "犰狳是单体保护型辅助，能让己方核心输出位变得坚不可摧。"
+}

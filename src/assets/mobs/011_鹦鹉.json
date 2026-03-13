@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:parrot",
+  "name": "鹦鹉",
+  "category": "辅助",
+  "baseStats": {
+    "health": 10,
+    "attack": 2.5,
+    "defense": 1.0,
+    "moveSpeed": 0.30
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.15,
+      "attackPerStar": 0.15,
+      "skillPowerPerStar": 0.18
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 10.0,
+        "attack": 2.5,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 11.5,
+        "attack": 2.9,
+        "skillPowerMultiplier": 1.18
+      },
+      {
+        "star": 3,
+        "health": 13.0,
+        "attack": 3.3,
+        "skillPowerMultiplier": 1.36
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "声带模仿",
+      "type": "主动",
+      "cooldown": 10,
+      "triggerCondition": "自动触发",
+      "description": "模仿周围怪物的叫声，混淆敌人。",
+      "damageFormula": "星级*0.5*基础攻击*1.5",
+      "skillBackground": "鹦鹉会模仿附近怪物的声音，有时可以用来预警。",
+      "effect": "对随机敌人造成伤害，并使其混乱（随机攻击周围单位）1秒"
+    },
+    {
+      "name": "肩上伙伴",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "停留在队友肩上，提供战术指导。",
+      "damageFormula": "属性提升10%",
+      "skillBackground": "玩家可以让鹦鹉停在肩膀上。",
+      "effect": "战斗开始时，依附于攻击力最高的友军，使其全属性提升10%，直到鹦鹉受到伤害分离"
+    },
+    {
+      "name": "派对时间",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时播放音乐，全场起舞。",
+      "damageFormula": "攻速+30%",
+      "skillBackground": "在播放唱片时，鹦鹉会随着音乐跳舞。",
+      "effect": "己方全体攻击速度提升30%，移动速度提升20%，持续5秒"
+    }
+  ],
+  "story": "鹦鹉是强力的buff提供者，通过依附核心C位使其输出最大化，升星技能更是全队的爆发号角。"
+}

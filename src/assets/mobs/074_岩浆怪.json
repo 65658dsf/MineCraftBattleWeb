@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:magma_cube",
+  "name": "岩浆怪",
+  "category": "敌对",
+  "baseStats": {
+    "health": 48,
+    "attack": 9.0,
+    "defense": 11,
+    "moveSpeed": 0.2
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.19,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 48.0,
+        "attack": 9.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 57.1,
+        "attack": 10.1,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 66.2,
+        "attack": 11.2,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "molten_slam",
+      "name": "熔核重坠",
+      "cooldown": 8,
+      "type": "主动",
+      "triggerCondition": "跳跃落地时",
+      "description": "落地冲击造成范围熔伤。",
+      "damageFormula": "基础攻击*1.25+3",
+      "skillBackground": "高温熔核在撞击时会剧烈外溅。",
+      "effect": "范围伤害并减速"
+    },
+    {
+      "id": "lava_membrane",
+      "name": "熔膜护层",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "被近战命中",
+      "description": "灼热体表反伤并降低敌攻速。",
+      "damageFormula": "反伤=基础攻击*0.3",
+      "skillBackground": "岩浆膜层可在接触时灼伤敌人。",
+      "effect": "反伤并降攻速1秒"
+    }
+  ],
+  "story": "岩浆怪是高韧性范围位，擅长近身反制与群体消耗。"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:mooshroom",
+  "name": "哞菇",
+  "category": "辅助",
+  "baseStats": {
+    "health": 40,
+    "attack": 4.8,
+    "defense": 10,
+    "moveSpeed": 0.18
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.20,
+      "attackPerStar": 0.11,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 40.0,
+        "attack": 4.8,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 48.0,
+        "attack": 5.3,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 56.0,
+        "attack": 5.8,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "迷之炖菜",
+      "type": "主动",
+      "cooldown": 8,
+      "triggerCondition": "自动触发",
+      "description": "投喂队友一碗迷之炖菜，赋予随机增益。",
+      "damageFormula": "无",
+      "skillBackground": "对哞菇使用碗可以获得迷之炖菜，效果随机。",
+      "effect": "使随机一名友军获得（生命恢复/抗性提升/伤害提升）中的一种，持续4秒"
+    },
+    {
+      "name": "孢子光环",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "散发的真菌孢子让周围敌人感到不适。",
+      "damageFormula": "每秒伤害=攻击力*0.2",
+      "skillBackground": "哞菇身上覆盖着蘑菇，周围环境往往也充满了菌丝。",
+      "effect": "周围3格内的敌人移动速度降低15%，并持续受到微量毒素伤害"
+    },
+    {
+      "name": "菌丝蔓延",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时爆发菌丝能量，滋养大地。",
+      "damageFormula": "治疗量=最大生命*20%",
+      "skillBackground": "蘑菇岛的菌丝具有极强的侵略性和生命力。",
+      "effect": "在该位置生成一片持续6秒的菌丝地，处于其上的友军每秒恢复生命，敌人每秒受到伤害"
+    }
+  ],
+  "story": "哞菇是随机性较强的辅助，既能提供强力buff，又能通过光环削弱敌人，升星后的阵地战能力极强。"
+}

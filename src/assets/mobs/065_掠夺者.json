@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:pillager",
+  "name": "掠夺者",
+  "category": "敌对",
+  "baseStats": {
+    "health": 34,
+    "attack": 8.0,
+    "defense": 7,
+    "moveSpeed": 0.24
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 34.0,
+        "attack": 8.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 39.8,
+        "attack": 9.1,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 45.6,
+        "attack": 10.2,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "crossbow_volley",
+      "name": "连弩齐射",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "中距离有目标",
+      "description": "连续发射弩箭压制敌方前排。",
+      "damageFormula": "基础攻击*1.22+2",
+      "skillBackground": "标准化军械训练提升射击稳定性。",
+      "effect": "两段伤害"
+    },
+    {
+      "id": "raider_focus",
+      "name": "劫掠专注",
+      "cooldown": 9,
+      "type": "被动",
+      "triggerCondition": "友军靠近时",
+      "description": "协同作战时提升命中与暴击。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "掠夺编队擅长集火同一目标。",
+      "effect": "命中+10%持续2秒"
+    }
+  ],
+  "story": "掠夺者是中远程压制位，靠稳定点射打持续输出。"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:copper_golem",
+  "name": "铜傀儡",
+  "category": "无差别",
+  "baseStats": {
+    "health": 58,
+    "attack": 10.0,
+    "defense": 13,
+    "moveSpeed": 0.18
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.12,
+      "skillPowerPerStar": 0.11
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 58.0,
+        "attack": 10.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 68.4,
+        "attack": 11.2,
+        "skillPowerMultiplier": 1.11
+      },
+      {
+        "star": 3,
+        "health": 78.9,
+        "attack": 12.4,
+        "skillPowerMultiplier": 1.22
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "copper_punch",
+      "name": "铜拳重击",
+      "cooldown": 7,
+      "type": "主动",
+      "triggerCondition": "近战命中后",
+      "description": "机械重拳造成破甲物理伤害。",
+      "damageFormula": "基础攻击*1.26+3",
+      "skillBackground": "金属结构赋予其高动能直拳。",
+      "effect": "额外伤害并降防1秒"
+    },
+    {
+      "id": "oxidation_guard",
+      "name": "氧化护层",
+      "cooldown": 10,
+      "type": "被动",
+      "triggerCondition": "生命低于50%",
+      "description": "外层硬化提高减伤但稍降移速。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "氧化层在战斗中可提供额外保护。",
+      "effect": "减伤20%持续2秒"
+    }
+  ],
+  "story": "铜傀儡是稳健机械前排，抗压与反击兼备。"
+}

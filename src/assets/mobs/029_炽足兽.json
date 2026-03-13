@@ -1,0 +1,74 @@
+{
+  "id": "minecraft:strider",
+  "name": "炽足兽",
+  "category": "辅助",
+  "baseStats": {
+    "health": 28,
+    "attack": 4.0,
+    "defense": 6,
+    "moveSpeed": 0.3
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.17,
+      "attackPerStar": 0.13,
+      "skillPowerPerStar": 0.13
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 28.0,
+        "attack": 4.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 32.8,
+        "attack": 4.5,
+        "skillPowerMultiplier": 1.13
+      },
+      {
+        "star": 3,
+        "health": 37.5,
+        "attack": 5.0,
+        "skillPowerMultiplier": 1.26
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "热浪冲击",
+      "type": "主动",
+      "cooldown": 8,
+      "triggerCondition": "自动触发",
+      "description": "散发热浪，灼烧周围的敌人。",
+      "damageFormula": "星级*0.5*基础攻击*1.0",
+      "skillBackground": "炽足兽生活在熔岩湖中，自带高温。",
+      "effect": "对周围敌人造成伤害并施加灼烧（每秒伤害）持续3秒"
+    },
+    {
+      "name": "熔岩行者",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "常驻",
+      "description": "免疫火焰伤害，且在受热时更活跃。",
+      "damageFormula": "无",
+      "skillBackground": "炽足兽在熔岩上行走速度很快，离开熔岩会发抖变慢。",
+      "effect": "免疫火焰/熔岩伤害。若受到火焰伤害，反而移动速度提升30%"
+    },
+    {
+      "name": "诡异菌钓竿",
+      "type": "被动",
+      "cooldown": 0,
+      "triggerCondition": "升星时",
+      "description": "升星时受到诡异菌的刺激，疯狂奔跑。",
+      "damageFormula": "无",
+      "skillBackground": "玩家使用诡异菌钓竿可以加速骑乘炽足兽。",
+      "effect": "自身移动速度和攻击速度提升50%，持续6秒"
+    }
+  ],
+  "story": "炽足兽是环境适应型辅助，在面对火焰伤害敌人时表现出色，升星后具备不错的爆发追击能力。"
+}

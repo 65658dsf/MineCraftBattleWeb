@@ -1,0 +1,73 @@
+{
+  "id": "minecraft:046",
+  "name": "僵尸",
+  "category": "敌对",
+  "baseStats": {
+    "health": 30,
+    "attack": 6.0,
+    "moveSpeed": 0.23
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.18,
+      "attackPerStar": 0.14,
+      "skillPowerPerStar": 0.12
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 30.0,
+        "attack": 6.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 35.4,
+        "attack": 6.8,
+        "skillPowerMultiplier": 1.12
+      },
+      {
+        "star": 3,
+        "health": 40.8,
+        "attack": 7.7,
+        "skillPowerMultiplier": 1.24
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "腐烂抓击",
+      "type": "主动",
+      "cooldown": 6,
+      "triggerCondition": "近战命中时",
+      "description": "僵尸挥出腐烂利爪并附加持续伤害。",
+      "damageFormula": "基础攻击*1.15+3",
+      "skillBackground": "墓地徘徊的僵尸擅长用腐化伤口拖垮敌人。",
+      "effect": "目标2秒内每秒额外受伤1点"
+    },
+    {
+      "name": "尸潮本能",
+      "type": "被动",
+      "cooldown": 12,
+      "triggerCondition": "生命低于50%时",
+      "description": "濒危时进入暴走，提升攻速并获得减伤。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "亡者在重创时会暴走，用蛮力硬顶战线。",
+      "effect": "攻速+20%，减伤20%，持续3秒"
+    },
+    {
+      "name": "腐朽再起",
+      "type": "被动",
+      "cooldown": 20,
+      "triggerCondition": "击杀敌方阵营生物",
+      "description": "收割后立即回复生命并升1星。",
+      "damageFormula": "回复=最大生命*0.12",
+      "skillBackground": "僵尸吞噬生机恢复战斗力，越战越难缠。",
+      "effect": "回复生命并清除1个负面效果"
+    }
+  ],
+  "story": "僵尸在阵营战中负责抢节奏与滚优势，击杀即可升星。"
+}

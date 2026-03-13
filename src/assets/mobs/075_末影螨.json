@@ -1,0 +1,66 @@
+{
+  "id": "minecraft:endermite",
+  "name": "末影螨",
+  "category": "敌对",
+  "baseStats": {
+    "health": 12,
+    "attack": 4.0,
+    "defense": 2,
+    "moveSpeed": 0.34
+  },
+  "starProgression": {
+    "maxStar": 3,
+    "starUpRule": "每击杀敌方阵营生物升1星",
+    "killRequiredPerStar": 1,
+    "growth": {
+      "healthPerStar": 0.14,
+      "attackPerStar": 0.17,
+      "skillPowerPerStar": 0.15
+    },
+    "starValues": [
+      {
+        "star": 1,
+        "health": 12.0,
+        "attack": 4.0,
+        "skillPowerMultiplier": 1.0
+      },
+      {
+        "star": 2,
+        "health": 13.7,
+        "attack": 4.7,
+        "skillPowerMultiplier": 1.15
+      },
+      {
+        "star": 3,
+        "health": 15.4,
+        "attack": 5.4,
+        "skillPowerMultiplier": 1.3
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "void_nip",
+      "name": "虚咬侵蚀",
+      "cooldown": 6,
+      "type": "主动",
+      "triggerCondition": "近战命中时",
+      "description": "啃咬附带虚空侵蚀伤害。",
+      "damageFormula": "基础攻击*1.22+1",
+      "skillBackground": "末影能量让其攻击更具穿透性。",
+      "effect": "额外伤害并减疗1秒"
+    },
+    {
+      "id": "rift_scurry",
+      "name": "裂隙疾窜",
+      "cooldown": 8,
+      "type": "被动",
+      "triggerCondition": "被锁定时",
+      "description": "短暂加速脱离火力覆盖。",
+      "damageFormula": "无直接伤害",
+      "skillBackground": "微型体态配合位移极难被追上。",
+      "effect": "移速+24%持续1.5秒"
+    }
+  ],
+  "story": "末影螨是骚扰收割位，脆皮但机动和补刀能力出色。"
+}
