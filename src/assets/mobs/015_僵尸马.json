@@ -40,16 +40,18 @@
   },
   "skills": [
     {
+      "id": "whcz",
       "name": "亡骸冲撞",
       "type": "主动",
       "cooldown": 8,
       "triggerCondition": "自动触发",
       "description": "带着腐烂的气息冲向敌人。",
-      "damageFormula": "星级*0.5*基础攻击*1.2",
+      "damageFormula": "基础攻击*1.2",
       "skillBackground": "僵尸马是未被使用的游戏素材，浑身散发着腐烂气息。",
       "effect": "冲撞路径上的敌人，并施加中毒效果（每秒造成攻击力30%的伤害），持续4秒"
     },
     {
+      "id": "sebj",
       "name": "死而不僵",
       "type": "被动",
       "cooldown": 5,
@@ -60,6 +62,7 @@
       "effect": "若3秒内未受到伤害，每秒回复2%最大生命值"
     },
     {
+      "id": "sqhh",
       "name": "尸群呼唤",
       "type": "被动",
       "cooldown": 0,

@@ -40,16 +40,18 @@
   },
   "skills": [
     {
+      "id": "rlcj",
       "name": "热浪冲击",
       "type": "主动",
       "cooldown": 8,
       "triggerCondition": "自动触发",
       "description": "散发热浪，灼烧周围的敌人。",
-      "damageFormula": "星级*0.5*基础攻击*1.0",
+      "damageFormula": "基础攻击*1.0",
       "skillBackground": "炽足兽生活在熔岩湖中，自带高温。",
       "effect": "对周围敌人造成伤害并施加灼烧（每秒伤害）持续3秒"
     },
     {
+      "id": "ryxz",
       "name": "熔岩行者",
       "type": "被动",
       "cooldown": 0,
@@ -60,6 +62,7 @@
       "effect": "免疫火焰/熔岩伤害。若受到火焰伤害，反而移动速度提升30%"
     },
     {
+      "id": "gyjd",
       "name": "诡异菌钓竿",
       "type": "被动",
       "cooldown": 0,

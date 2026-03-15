@@ -40,6 +40,7 @@
   },
   "skills": [
     {
+      "id": "gghl",
       "name": "咯咯号令",
       "type": "主动",
       "cooldown": 8,
@@ -51,6 +52,7 @@
     },
     {
       "name": "羽落轻盈",
+      "id": "ylqy",
       "type": "被动",
       "cooldown": 0,
       "triggerCondition": "常驻",
@@ -61,6 +63,7 @@
     },
     {
       "name": "晨曦报晓",
+      "id": "cxbx",
       "type": "被动",
       "cooldown": 0,
       "triggerCondition": "升星时",

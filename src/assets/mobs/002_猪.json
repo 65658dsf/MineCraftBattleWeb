@@ -13,8 +13,8 @@
     "starUpRule": "每击杀敌方阵营生物升1星",
     "killRequiredPerStar": 1,
     "growth": {
-      "healthPerStar": 0.20,
-      "attackPerStar": 0.10,
+      "healthPerStar": 0.2,
+      "attackPerStar": 0.1,
       "skillPowerPerStar": 0.12
     },
     "starValues": [
@@ -41,16 +41,18 @@
   "skills": [
     {
       "name": "冲撞拱泥",
+      "id": "czgn",
       "type": "主动",
       "cooldown": 10,
       "triggerCondition": "自动触发",
       "description": "向敌人发起冲撞，扬起泥土干扰视线。",
-      "damageFormula": "星级*0.5*基础攻击*1.5",
+      "damageFormula": "基础攻击*1.5",
       "skillBackground": "猪喜欢在泥土中打滚，冲撞时会带起泥浆。",
       "effect": "对目标造成伤害并使其命中率降低30%，持续3秒"
     },
     {
       "name": "厚皮脂肪",
+      "id": "hpzf",
       "type": "被动",
       "cooldown": 0,
       "triggerCondition": "常驻",
@@ -61,6 +63,7 @@
     },
     {
       "name": "饱食成长",
+      "id": "bscz",
       "type": "被动",
       "cooldown": 0,
       "triggerCondition": "升星时",

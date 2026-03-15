@@ -41,6 +41,7 @@
   "skills": [
     {
       "name": "羊毛护盾",
+      "id": "ymhd",
       "type": "主动",
       "cooldown": 12,
       "triggerCondition": "自动触发",
@@ -51,16 +52,18 @@
     },
     {
       "name": "静电绒毛",
+      "id": "jdrm",
       "type": "被动",
       "cooldown": 0,
       "triggerCondition": "受击时",
       "description": "蓬松的羊毛带有静电，干扰攻击者。",
-      "damageFormula": "反伤=防御力*0.5",
+      "damageFormula": "反伤=受到伤害*0.3",
       "skillBackground": "羊毛摩擦产生静电，让接触者感到不适。",
       "effect": "近战攻击者有15%概率被麻痹（攻速降低50%）1秒"
     },
     {
       "name": "彩虹变色",
+      "id": "chbs",
       "type": "被动",
       "cooldown": 0,
       "triggerCondition": "升星时",

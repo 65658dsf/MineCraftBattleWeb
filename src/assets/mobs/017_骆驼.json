@@ -1,4 +1,4 @@
-{
+﻿{
   "id": "minecraft:camel",
   "name": "骆驼",
   "category": "辅助",
@@ -40,16 +40,18 @@
   },
   "skills": [
     {
+      "id": "smtj",
       "name": "沙漠突进",
       "type": "主动",
       "cooldown": 10,
       "triggerCondition": "自动触发",
       "description": "向前猛冲一段距离。",
-      "damageFormula": "星级*0.5*基础攻击*1.4",
+      "damageFormula": "基础攻击*1.4",
       "skillBackground": "骆驼拥有冲刺跳跃的能力，可以跨越峡谷。",
       "effect": "向前冲刺并撞开路径上的敌人，造成伤害和击退"
     },
     {
+      "id": "gssz",
       "name": "高耸身姿",
       "type": "被动",
       "cooldown": 0,
@@ -60,6 +62,7 @@
       "effect": "对近战攻击的闪避率提升20%"
     },
     {
+      "id": "sdxq",
       "name": "商队休憩",
       "type": "被动",
       "cooldown": 0,
@@ -67,7 +70,7 @@
       "description": "升星时坐下休息，提供恢复光环。",
       "damageFormula": "回复生命",
       "skillBackground": "骆驼会坐下休息，商队此时通常会整顿补给。",
-      "effect": "自身获得大幅减伤，并使周围友军每秒恢复5%最大生命，持续5秒"
+      "effect": "自身获得20%伤害减免，并使周围友军每秒恢复5%最大生命，期间无法移动，持续5秒"
     }
   ],
   "story": "骆驼是阵地战坦克，利用身高优势规避伤害，并在升星时提供强力的团队续航。"

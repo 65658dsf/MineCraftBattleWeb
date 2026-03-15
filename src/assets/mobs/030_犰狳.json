@@ -40,35 +40,38 @@
   },
   "skills": [
     {
+      "id": "gkzj",
       "name": "滚壳撞击",
       "type": "主动",
       "cooldown": 9,
       "triggerCondition": "自动触发",
       "description": "缩成球体向前滚动撞击。",
-      "damageFormula": "星级*0.5*基础攻击*1.2",
+      "damageFormula": "基础攻击*1.2",
       "skillBackground": "犰狳受惊时会卷成球。",
       "effect": "对路径上的敌人造成伤害并击退"
     },
     {
+      "id": "lj",
       "name": "鳞甲",
       "type": "被动",
       "cooldown": 0,
       "triggerCondition": "常驻",
       "description": "坚硬的鳞甲提供额外防护。",
-      "damageFormula": "防御",
-      "skillBackground": "犰狳掉落的鳞甲可以制作狼铠。",
+      "damageFormula": "减伤20%",
+      "skillBackground": "犰狳的甲壳是天然护盾。",
       "effect": "自身受到的物理伤害降低20%"
     },
     {
+      "id": "lkzl",
       "name": "狼铠赠礼",
       "type": "被动",
       "cooldown": 0,
       "triggerCondition": "升星时",
-      "description": "升星时为最强的队友装备狼铠。",
-      "damageFormula": "护盾",
-      "skillBackground": "狼铠能为狼提供极高的防御。",
-      "effect": "为攻击力最高的友军提供一个相当于其最大生命值50%的巨额护盾，持续10秒"
+      "description": "升星时为最强队友披挂护甲。",
+      "damageFormula": "护盾=最大生命50%",
+      "skillBackground": "象征守护的护铠会优先给最强战友。",
+      "effect": "为攻击力最高的友军提供相当于其最大生命50%的护盾，持续10秒"
     }
   ],
-  "story": "犰狳是单体保护型辅助，能让己方核心输出位变得坚不可摧。"
+  "story": "犰狳是单体保护型辅助，能让己方核心输出位更难被击倒。"
 }

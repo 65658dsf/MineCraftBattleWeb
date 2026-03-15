@@ -40,26 +40,29 @@
   },
   "skills": [
     {
+      "id": "sdmf",
       "name": "声带模仿",
       "type": "主动",
       "cooldown": 10,
       "triggerCondition": "自动触发",
       "description": "模仿周围怪物的叫声，混淆敌人。",
-      "damageFormula": "星级*0.5*基础攻击*1.5",
+      "damageFormula": "基础攻击*1.5",
       "skillBackground": "鹦鹉会模仿附近怪物的声音，有时可以用来预警。",
       "effect": "对随机敌人造成伤害，并使其混乱（随机攻击周围单位）1秒"
     },
     {
+      "id": "jsph",
       "name": "肩上伙伴",
       "type": "被动",
-      "cooldown": 0,
+      "cooldown": 3,
       "triggerCondition": "常驻",
       "description": "停留在队友肩上，提供战术指导。",
       "damageFormula": "属性提升10%",
       "skillBackground": "玩家可以让鹦鹉停在肩膀上。",
-      "effect": "战斗开始时，依附于攻击力最高的友军，使其全属性提升10%，直到鹦鹉受到伤害分离"
+      "effect": "战斗开始时依附于攻击力最高的友军，使其全属性提升10%；鹦鹉或宿主受击时会分离，3秒后才能再次依附"
     },
     {
+      "id": "pdsj",
       "name": "派对时间",
       "type": "被动",
       "cooldown": 0,

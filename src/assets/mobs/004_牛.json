@@ -41,6 +41,7 @@
   "skills": [
     {
       "name": "牛乳甘霖",
+      "id": "nrgl",
       "type": "主动",
       "cooldown": 10,
       "triggerCondition": "自动触发",
@@ -51,6 +52,7 @@
     },
     {
       "name": "坚韧牛皮",
+      "id": "jrnp",
       "type": "被动",
       "cooldown": 0,
       "triggerCondition": "常驻",
@@ -61,6 +63,7 @@
     },
     {
       "name": "丰饶恩赐",
+      "id": "frec",
       "type": "被动",
       "cooldown": 0,
       "triggerCondition": "升星时",

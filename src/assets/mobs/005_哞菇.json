@@ -40,6 +40,7 @@
   },
   "skills": [
     {
+      "id": "mzdc",
       "name": "迷之炖菜",
       "type": "主动",
       "cooldown": 8,
@@ -50,16 +51,18 @@
       "effect": "使随机一名友军获得（生命恢复/抗性提升/伤害提升）中的一种，持续4秒"
     },
     {
+      "id": "bzgh",
       "name": "孢子光环",
       "type": "被动",
-      "cooldown": 0,
+      "cooldown": 5,
       "triggerCondition": "常驻",
       "description": "散发的真菌孢子让周围敌人感到不适。",
       "damageFormula": "每秒伤害=攻击力*0.2",
       "skillBackground": "哞菇身上覆盖着蘑菇，周围环境往往也充满了菌丝。",
-      "effect": "周围3格内的敌人移动速度降低15%，并持续受到微量毒素伤害"
+      "effect": "生效时仅在脚下显示一圈半径2的绿色粒子圆圈；圈内敌人中毒并减速，持续3秒；效果结束后进入5秒冷却"
     },
     {
+      "id": "jsmy",
       "name": "菌丝蔓延",
       "type": "被动",
       "cooldown": 0,

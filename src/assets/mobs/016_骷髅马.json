@@ -40,16 +40,18 @@
   },
   "skills": [
     {
+      "id": "ljxj",
       "name": "雷击陷阱",
       "type": "主动",
       "cooldown": 12,
       "triggerCondition": "自动触发",
       "description": "以自身为中心在边长5格正方形范围内部署一个雷击陷阱。",
-      "damageFormula": "星级*0.5*基础伤害*1.25，眩晕0.8秒",
+      "damageFormula": "基础伤害*1.25，眩晕0.8秒",
       "skillBackground": "骷髅马通常由雷击产生，且伴随着骷髅陷阱。",
       "effect": "在当前坐标为中心边长为5的正方形范围内部署一个陷阱，陷阱以圆形粒子特效展示并占据一个方块大小，敌人踩中后受到雷击伤害并眩晕0.8秒"
     },
     {
+      "id": "gjqy",
       "name": "骨架轻盈",
       "type": "被动",
       "cooldown": 0,
@@ -60,6 +62,7 @@
       "effect": "自身闪避率提升15%，且移动在水中不会减速"
     },
     {
+      "id": "sqsj",
       "name": "四骑士降临",
       "type": "被动",
       "cooldown": 0,

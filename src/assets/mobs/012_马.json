@@ -40,16 +40,18 @@
   },
   "skills": [
     {
+      "id": "ttcf",
       "name": "铁蹄冲锋",
       "type": "主动",
       "cooldown": 8,
       "triggerCondition": "自动触发",
       "description": "向敌人发起冲锋，击退并打乱阵型。",
-      "damageFormula": "星级*0.5*基础攻击*1.5",
+      "damageFormula": "基础攻击*1.5",
       "skillBackground": "马在冲刺时具有极大的动能。",
       "effect": "冲向目标，造成伤害并将其击退3格"
     },
     {
+      "id": "fcdc",
       "name": "风驰电掣",
       "type": "被动",
       "cooldown": 0,
@@ -60,6 +62,7 @@
       "effect": "自身移动速度永久提升20%"
     },
     {
+      "id": "rmhy",
       "name": "人马合一",
       "type": "被动",
       "cooldown": 0,

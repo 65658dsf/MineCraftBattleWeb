@@ -1,4 +1,4 @@
-{
+﻿{
   "id": "minecraft:frog",
   "name": "青蛙",
   "category": "辅助",
@@ -40,16 +40,18 @@
   },
   "skills": [
     {
+      "id": "csbs",
       "name": "长舌捕食",
       "type": "主动",
       "cooldown": 8,
       "triggerCondition": "自动触发",
       "description": "弹射长舌，将远处的敌人拉向自己。",
-      "damageFormula": "星级*0.5*基础攻击*1.2",
+      "damageFormula": "基础攻击*1.2",
       "skillBackground": "青蛙捕食时会吐出长舌头将猎物卷入口中。",
       "effect": "将最远的一名敌人拉至身前，并造成伤害"
     },
     {
+      "id": "kdtz",
       "name": "抗毒体质",
       "type": "被动",
       "cooldown": 0,
@@ -60,6 +62,7 @@
       "effect": "自身免疫中毒和凋零效果"
     },
     {
+      "id": "tsyj",
       "name": "吞噬岩浆",
       "type": "被动",
       "cooldown": 0,
@@ -67,7 +70,7 @@
       "description": "升星时吐出闪耀的蛙明灯。",
       "damageFormula": "无",
       "skillBackground": "青蛙吞噬岩浆怪会掉落蛙明灯。",
-      "effect": "在原地生成一个持续6秒的“蛙明灯光环”，光环内的友军每秒恢复8%生命"
+      "effect": "在中心生成缓慢旋转的蛙明灯，并以其为中心生成半径5的白色环形粒子；圆环内友军每秒恢复8%生命，持续6秒"
     }
   ],
   "story": "青蛙是位移控制辅助，能破坏敌方站位，并在升星时提供阵地治疗。"

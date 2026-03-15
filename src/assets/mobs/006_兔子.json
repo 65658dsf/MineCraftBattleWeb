@@ -40,6 +40,7 @@
   },
   "skills": [
     {
+      "id": "ydzl",
       "name": "跃动助力",
       "type": "主动",
       "cooldown": 9,
@@ -50,6 +51,7 @@
       "effect": "使攻击力最高的友军暴击率提升20%，持续4秒"
     },
     {
+      "id": "xyj",
       "name": "幸运脚",
       "type": "被动",
       "cooldown": 0,
@@ -60,6 +62,7 @@
       "effect": "自身闪避率提升25%"
     },
     {
+      "id": "ssbn",
       "name": "杀手本能",
       "type": "被动",
       "cooldown": 0,

@@ -40,6 +40,7 @@
   },
   "skills": [
     {
+      "id": "zyhq",
       "name": "治愈火球",
       "type": "主动",
       "cooldown": 8,
@@ -50,6 +51,7 @@
       "effect": "对生命最低的友军发射火球，造成大幅治疗"
     },
     {
+      "id": "piaofu",
       "name": "漂浮",
       "type": "被动",
       "cooldown": 0,
@@ -60,6 +62,7 @@
       "effect": "免疫所有地面陷阱和减速地带效果"
     },
     {
+      "id": "hsxy",
       "name": "欢声笑语",
       "type": "被动",
       "cooldown": 0,
