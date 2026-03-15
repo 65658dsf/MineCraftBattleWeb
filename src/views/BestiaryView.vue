@@ -87,6 +87,17 @@
           清空
         </button>
       </div>
+      <div class="batch-category-tools">
+        <button
+          v-for="category in batchCategoryQuickOptions"
+          :key="category"
+          class="batch-category-btn"
+          :disabled="isBatchExporting"
+          @click="selectBatchByCategory(category)"
+        >
+          {{ category }}
+        </button>
+      </div>
       <n-scrollbar class="batch-select-scroll">
         <n-checkbox-group v-model:value="batchSelectedKeys">
           <div class="batch-select-list">
@@ -216,7 +227,7 @@
 
   <div ref="batchCaptureRef" class="mc-gui-window export-mode export-hidden" v-if="exportMob">
     <div class="gui-content">
-      <div class="export-title">{{ exportMob.name }} · 生物图鉴</div>
+      <div class="export-title">{{ exportMob.name }} 生物图鉴</div>
       <div class="gui-grid">
         <div class="mob-preview">
           <div class="image-slot mc-border-inset">
@@ -359,6 +370,13 @@ const filteredMobs = computed(() => {
   })
 })
 
+const batchCategoryQuickOptions = computed(() => {
+  const categoriesInView = Array.from(
+    new Set(filteredMobs.value.map((mob) => mob.category).filter(Boolean))
+  )
+  return categoryOptions.value.filter((category) => categoriesInView.includes(category))
+})
+
 const shouldUseVirtual = computed(() => filteredMobs.value.length > 100)
 
 const virtualRows = computed(() => {
@@ -399,6 +417,12 @@ const clearBatchTargets = () => {
   batchSelectedKeys.value = []
 }
 
+const selectBatchByCategory = (category) => {
+  batchSelectedKeys.value = filteredMobs.value
+    .filter((mob) => mob.category === category)
+    .map((mob) => mob.fileName)
+}
+
 const toSafeName = (name, fallback) => {
   return String(name || fallback || '生物').replace(/[\\/:*?"<>|]/g, '-')
 }
@@ -431,7 +455,7 @@ const downloadBestiaryPage = async () => {
     if (cloneContent) {
       const exportTitle = document.createElement('div')
       exportTitle.className = 'export-title'
-      exportTitle.textContent = `${activeMob.value.name} · 生物图鉴`
+      exportTitle.textContent = `${activeMob.value.name}-生物图鉴`
       cloneContent.prepend(exportTitle)
     }
     Object.assign(clone.style, {
@@ -719,6 +743,33 @@ const VirtualRow = defineComponent({
   margin-bottom: 10px;
 }
 
+.batch-category-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.batch-category-btn {
+  min-height: 32px;
+  padding: 2px 10px;
+  border: 2px solid #000;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #555;
+  border-right-color: #555;
+  background: rgba(22, 163, 74, 0.9);
+  color: #fff;
+  font-family: var(--font-pixel-text);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.batch-category-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
 .batch-tool-btn {
   min-height: 34px;
   padding: 4px 12px;
@@ -750,8 +801,8 @@ const VirtualRow = defineComponent({
 }
 
 .batch-select-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
   padding: 12px;
 }
@@ -759,6 +810,24 @@ const VirtualRow = defineComponent({
 .batch-select-item {
   background: rgba(255, 255, 255, 0.15);
   padding: 4px 6px;
+}
+
+@media (max-width: 1200px) {
+  .batch-select-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .batch-select-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .batch-select-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .batch-select-actions {
