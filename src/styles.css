@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@font-face {
+  font-family: 'PixelFonts';
+  src: url('./assets/fonts/5_Minecraft AE(支持中文).ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   /* MC 配色板 */
@@ -16,8 +22,8 @@
   --mc-item-slot: #8B8B8B;
   
   /* 字体 */
-  --font-pixel-title: 'Press Start 2P', monospace;
-  --font-pixel-text: 'VT323', monospace;
+  --font-pixel-title: 'PixelFonts', monospace;
+  --font-pixel-text: 'PixelFonts', monospace;
   
   /* 基础设置 */
   font-family: var(--font-pixel-text);

@@ -30,7 +30,7 @@ const breakpoints = {
 
 const themeOverrides = {
   common: {
-    fontFamily: "'VT323', monospace",
+    fontFamily: "'PixelFonts', monospace",
     borderRadius: '0px',
     primaryColor: '#5D9C59',
     primaryColorHover: '#7CFC00',
